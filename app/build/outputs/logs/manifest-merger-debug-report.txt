@@ -1,0 +1,178 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\Gray.Gray-Sama\Desktop\ingsoft\medicApp\app\src\main\AndroidManifest.xml:2:1-24:12
+INJECTED from C:\Users\Gray.Gray-Sama\Desktop\ingsoft\medicApp\app\src\main\AndroidManifest.xml:2:1-24:12
+INJECTED from C:\Users\Gray.Gray-Sama\Desktop\ingsoft\medicApp\app\src\main\AndroidManifest.xml:2:1-24:12
+INJECTED from C:\Users\Gray.Gray-Sama\Desktop\ingsoft\medicApp\app\src\main\AndroidManifest.xml:2:1-24:12
+MERGED from [com.android.support:design:28.0.0] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\design-28.0.0.aar\a0b7126c9024e79fe7470ece1bf3d625\AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\c9621124a4acd8d440e8001322215ca9\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\b42e98bb8630a4063ca4f35f2d19b769\AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:support-v4:28.0.0] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\support-v4-28.0.0.aar\7c87ba412dff844765010d8623399291\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0.aar\091757ed511ba0a8b6d1bf866f406f59\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-28.0.0.aar\8f524dbb5782d3561c824c898176859e\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:recyclerview-v7:28.0.0] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-28.0.0.aar\5cf5ef45c6eb2abce8cf1b78f5ea2221\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0.aar\54bafb3bf03a2cdba95d2f83fef7e5f1\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0.aar\a208c0a39125d5766c91c76b9c608eff\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0.aar\93ea2b1ea71d1c2360a0c12609594a23\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:transition:28.0.0] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\transition-28.0.0.aar\498ca2c624df16bc965cc942246970f4\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-media-compat:28.0.0] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\support-media-compat-28.0.0.aar\ffb3899eb18f9311b994f362b2303834\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:loader:28.0.0] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\loader-28.0.0.aar\c6a7e3489e98d7697a7b3fba8582bb29\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:viewpager:28.0.0] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0.aar\32b19e8c0128f70848fec72d454868bd\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0.aar\0e3f5eaffeaeeff040c0cd4fde31c5ec\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0.aar\c71bc08081f140e74e3c0b23553412fa\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0.aar\7e713036aa4b195978bebf81b04147f2\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:customview:28.0.0] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\customview-28.0.0.aar\807859d6a6f3cf209ce4283fcbd05460\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0.aar\0c7d8d2d421ecd9d00cae6d72c7d27a1\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0.aar\be30c60e8fcffdfbe80876ad59610be0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\f85625f57a673f00dbff75418a70619f\AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\194836a4d9707290d1ef833e4face71c\AndroidManifest.xml:17:1-25:12
+MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0.aar\030088e7f58f26aa72e289a0e3ca48c5\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:cardview-v7:28.0.0] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\cardview-v7-28.0.0.aar\11e3a0d94b4bd61bd8d6f854a73abd62\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\9205b3031e99bdbb9cee5244bb05261c\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\bf437cc281cb33f5cf7f43cd392a8d2a\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\9032fa5ba365838bfbdc8be3f5f0ecd5\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:print:28.0.0] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\151de01c96fc597f6a65981817894d18\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\f4360ad3f2aaaf06e363a322264ecc21\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\f4082c1e9232607cc088b6d702f87af1\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\f7869757d21681d3afac6e078773af32\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\996a70327dcac5e5e13f6e1417f92a92\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\9cbf85a0752e6b9bb9be6d63892bd8e9\AndroidManifest.xml:17:1-22:12
+INJECTED from C:\Users\Gray.Gray-Sama\Desktop\ingsoft\medicApp\app\src\main\AndroidManifest.xml:2:1-24:12
+INJECTED from C:\Users\Gray.Gray-Sama\Desktop\ingsoft\medicApp\app\src\main\AndroidManifest.xml:2:1-24:12
+INJECTED from C:\Users\Gray.Gray-Sama\Desktop\ingsoft\medicApp\app\src\main\AndroidManifest.xml:2:1-24:12
+	package
+		ADDED from C:\Users\Gray.Gray-Sama\Desktop\ingsoft\medicApp\app\src\main\AndroidManifest.xml:3:5-35
+		INJECTED from C:\Users\Gray.Gray-Sama\Desktop\ingsoft\medicApp\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Gray.Gray-Sama\Desktop\ingsoft\medicApp\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\Users\Gray.Gray-Sama\Desktop\ingsoft\medicApp\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Gray.Gray-Sama\Desktop\ingsoft\medicApp\app\src\main\AndroidManifest.xml:2:1-24:12
+		INJECTED from C:\Users\Gray.Gray-Sama\Desktop\ingsoft\medicApp\app\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from C:\Users\Gray.Gray-Sama\Desktop\ingsoft\medicApp\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Gray.Gray-Sama\Desktop\ingsoft\medicApp\app\src\main\AndroidManifest.xml:2:1-24:12
+		INJECTED from C:\Users\Gray.Gray-Sama\Desktop\ingsoft\medicApp\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\Gray.Gray-Sama\Desktop\ingsoft\medicApp\app\src\main\AndroidManifest.xml:2:11-69
+application
+ADDED from C:\Users\Gray.Gray-Sama\Desktop\ingsoft\medicApp\app\src\main\AndroidManifest.xml:5:5-22:19
+MERGED from [com.android.support:design:28.0.0] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\design-28.0.0.aar\a0b7126c9024e79fe7470ece1bf3d625\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:design:28.0.0] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\design-28.0.0.aar\a0b7126c9024e79fe7470ece1bf3d625\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\b42e98bb8630a4063ca4f35f2d19b769\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\b42e98bb8630a4063ca4f35f2d19b769\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\f85625f57a673f00dbff75418a70619f\AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\f85625f57a673f00dbff75418a70619f\AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\194836a4d9707290d1ef833e4face71c\AndroidManifest.xml:22:5-23:19
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\194836a4d9707290d1ef833e4face71c\AndroidManifest.xml:22:5-23:19
+	android:appComponentFactory
+		ADDED from [com.android.support:support-compat:28.0.0] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\f85625f57a673f00dbff75418a70619f\AndroidManifest.xml:22:18-91
+	android:supportsRtl
+		ADDED from C:\Users\Gray.Gray-Sama\Desktop\ingsoft\medicApp\app\src\main\AndroidManifest.xml:10:9-35
+	android:label
+		ADDED from C:\Users\Gray.Gray-Sama\Desktop\ingsoft\medicApp\app\src\main\AndroidManifest.xml:8:9-41
+	android:roundIcon
+		ADDED from C:\Users\Gray.Gray-Sama\Desktop\ingsoft\medicApp\app\src\main\AndroidManifest.xml:9:9-54
+	android:icon
+		ADDED from C:\Users\Gray.Gray-Sama\Desktop\ingsoft\medicApp\app\src\main\AndroidManifest.xml:7:9-43
+	android:allowBackup
+		ADDED from C:\Users\Gray.Gray-Sama\Desktop\ingsoft\medicApp\app\src\main\AndroidManifest.xml:6:9-35
+	android:theme
+		ADDED from C:\Users\Gray.Gray-Sama\Desktop\ingsoft\medicApp\app\src\main\AndroidManifest.xml:11:9-40
+activity#com.example.medicapp.MainActivity
+ADDED from C:\Users\Gray.Gray-Sama\Desktop\ingsoft\medicApp\app\src\main\AndroidManifest.xml:12:9-21:20
+	android:label
+		ADDED from C:\Users\Gray.Gray-Sama\Desktop\ingsoft\medicApp\app\src\main\AndroidManifest.xml:14:13-45
+	android:theme
+		ADDED from C:\Users\Gray.Gray-Sama\Desktop\ingsoft\medicApp\app\src\main\AndroidManifest.xml:15:13-56
+	android:name
+		ADDED from C:\Users\Gray.Gray-Sama\Desktop\ingsoft\medicApp\app\src\main\AndroidManifest.xml:13:13-41
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\Users\Gray.Gray-Sama\Desktop\ingsoft\medicApp\app\src\main\AndroidManifest.xml:16:13-20:29
+action#android.intent.action.MAIN
+ADDED from C:\Users\Gray.Gray-Sama\Desktop\ingsoft\medicApp\app\src\main\AndroidManifest.xml:17:17-69
+	android:name
+		ADDED from C:\Users\Gray.Gray-Sama\Desktop\ingsoft\medicApp\app\src\main\AndroidManifest.xml:17:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\Gray.Gray-Sama\Desktop\ingsoft\medicApp\app\src\main\AndroidManifest.xml:19:17-77
+	android:name
+		ADDED from C:\Users\Gray.Gray-Sama\Desktop\ingsoft\medicApp\app\src\main\AndroidManifest.xml:19:27-74
+uses-sdk
+INJECTED from C:\Users\Gray.Gray-Sama\Desktop\ingsoft\medicApp\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\Gray.Gray-Sama\Desktop\ingsoft\medicApp\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Gray.Gray-Sama\Desktop\ingsoft\medicApp\app\src\main\AndroidManifest.xml
+MERGED from [com.android.support:design:28.0.0] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\design-28.0.0.aar\a0b7126c9024e79fe7470ece1bf3d625\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:28.0.0] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\design-28.0.0.aar\a0b7126c9024e79fe7470ece1bf3d625\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\c9621124a4acd8d440e8001322215ca9\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\c9621124a4acd8d440e8001322215ca9\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\b42e98bb8630a4063ca4f35f2d19b769\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\b42e98bb8630a4063ca4f35f2d19b769\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:support-v4:28.0.0] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\support-v4-28.0.0.aar\7c87ba412dff844765010d8623399291\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:28.0.0] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\support-v4-28.0.0.aar\7c87ba412dff844765010d8623399291\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0.aar\091757ed511ba0a8b6d1bf866f406f59\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0.aar\091757ed511ba0a8b6d1bf866f406f59\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-28.0.0.aar\8f524dbb5782d3561c824c898176859e\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-28.0.0.aar\8f524dbb5782d3561c824c898176859e\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:28.0.0] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-28.0.0.aar\5cf5ef45c6eb2abce8cf1b78f5ea2221\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:28.0.0] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-28.0.0.aar\5cf5ef45c6eb2abce8cf1b78f5ea2221\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0.aar\54bafb3bf03a2cdba95d2f83fef7e5f1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0.aar\54bafb3bf03a2cdba95d2f83fef7e5f1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0.aar\a208c0a39125d5766c91c76b9c608eff\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0.aar\a208c0a39125d5766c91c76b9c608eff\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0.aar\93ea2b1ea71d1c2360a0c12609594a23\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0.aar\93ea2b1ea71d1c2360a0c12609594a23\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:28.0.0] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\transition-28.0.0.aar\498ca2c624df16bc965cc942246970f4\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:28.0.0] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\transition-28.0.0.aar\498ca2c624df16bc965cc942246970f4\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:28.0.0] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\support-media-compat-28.0.0.aar\ffb3899eb18f9311b994f362b2303834\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:28.0.0] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\support-media-compat-28.0.0.aar\ffb3899eb18f9311b994f362b2303834\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\loader-28.0.0.aar\c6a7e3489e98d7697a7b3fba8582bb29\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\loader-28.0.0.aar\c6a7e3489e98d7697a7b3fba8582bb29\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0.aar\32b19e8c0128f70848fec72d454868bd\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0.aar\32b19e8c0128f70848fec72d454868bd\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0.aar\0e3f5eaffeaeeff040c0cd4fde31c5ec\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0.aar\0e3f5eaffeaeeff040c0cd4fde31c5ec\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0.aar\c71bc08081f140e74e3c0b23553412fa\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0.aar\c71bc08081f140e74e3c0b23553412fa\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0.aar\7e713036aa4b195978bebf81b04147f2\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0.aar\7e713036aa4b195978bebf81b04147f2\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\customview-28.0.0.aar\807859d6a6f3cf209ce4283fcbd05460\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\customview-28.0.0.aar\807859d6a6f3cf209ce4283fcbd05460\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0.aar\0c7d8d2d421ecd9d00cae6d72c7d27a1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0.aar\0c7d8d2d421ecd9d00cae6d72c7d27a1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0.aar\be30c60e8fcffdfbe80876ad59610be0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0.aar\be30c60e8fcffdfbe80876ad59610be0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\f85625f57a673f00dbff75418a70619f\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\f85625f57a673f00dbff75418a70619f\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\194836a4d9707290d1ef833e4face71c\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\194836a4d9707290d1ef833e4face71c\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0.aar\030088e7f58f26aa72e289a0e3ca48c5\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0.aar\030088e7f58f26aa72e289a0e3ca48c5\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:28.0.0] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\cardview-v7-28.0.0.aar\11e3a0d94b4bd61bd8d6f854a73abd62\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:28.0.0] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\cardview-v7-28.0.0.aar\11e3a0d94b4bd61bd8d6f854a73abd62\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\9205b3031e99bdbb9cee5244bb05261c\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\9205b3031e99bdbb9cee5244bb05261c\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\bf437cc281cb33f5cf7f43cd392a8d2a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\bf437cc281cb33f5cf7f43cd392a8d2a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\9032fa5ba365838bfbdc8be3f5f0ecd5\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\9032fa5ba365838bfbdc8be3f5f0ecd5\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\151de01c96fc597f6a65981817894d18\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\151de01c96fc597f6a65981817894d18\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\f4360ad3f2aaaf06e363a322264ecc21\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\f4360ad3f2aaaf06e363a322264ecc21\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\f4082c1e9232607cc088b6d702f87af1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\f4082c1e9232607cc088b6d702f87af1\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\f7869757d21681d3afac6e078773af32\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\f7869757d21681d3afac6e078773af32\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\996a70327dcac5e5e13f6e1417f92a92\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\996a70327dcac5e5e13f6e1417f92a92\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\9cbf85a0752e6b9bb9be6d63892bd8e9\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\Gray.Gray-Sama\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\9cbf85a0752e6b9bb9be6d63892bd8e9\AndroidManifest.xml:20:5-44
+INJECTED from C:\Users\Gray.Gray-Sama\Desktop\ingsoft\medicApp\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Gray.Gray-Sama\Desktop\ingsoft\medicApp\app\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from C:\Users\Gray.Gray-Sama\Desktop\ingsoft\medicApp\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Gray.Gray-Sama\Desktop\ingsoft\medicApp\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Gray.Gray-Sama\Desktop\ingsoft\medicApp\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Users\Gray.Gray-Sama\Desktop\ingsoft\medicApp\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Gray.Gray-Sama\Desktop\ingsoft\medicApp\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Gray.Gray-Sama\Desktop\ingsoft\medicApp\app\src\main\AndroidManifest.xml
