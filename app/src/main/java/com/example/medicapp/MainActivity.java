@@ -2,10 +2,7 @@ package com.example.medicapp;
 
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -16,10 +13,17 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 
+import com.example.medicapp.fragment.AlarmaFragment;
+import com.example.medicapp.fragment.ConfiguracionFragment;
+import com.example.medicapp.fragment.HistorialFragment;
+import com.example.medicapp.fragment.MedicamentoFragment;
+import com.example.medicapp.fragment.MedicoFragment;
+
+
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, AlarmaFragment.OnFragmentInteractionListener, MedicoFragment.OnFragmentInteractionListener,
-        MedicamentoFragment.OnFragmentInteractionListener, HistorialFragment.OnFragmentInteractionListener, ConfiguracionFragment.OnFragmentInteractionListener,
-        ContenedorAlarma.OnFragmentInteractionListener, AgregarAlarmaFragment.OnFragmentInteractionListener{
+        MedicamentoFragment.OnFragmentInteractionListener, HistorialFragment.OnFragmentInteractionListener, ConfiguracionFragment.OnFragmentInteractionListener
+       {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -98,7 +102,7 @@ public class MainActivity extends AppCompatActivity
         boolean fragmentselected=false;
 
         if (id == R.id.nav_alarma) {
-            myfragment=new ContenedorAlarma();
+            myfragment=new AlarmaFragment();
             fragmentselected=true;
         } else if (id == R.id.nav_medico) {
             myfragment=new MedicoFragment();
