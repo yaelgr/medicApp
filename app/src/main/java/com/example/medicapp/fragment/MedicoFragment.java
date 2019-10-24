@@ -1,8 +1,11 @@
 package com.example.medicapp.fragment;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -10,8 +13,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.medicapp.Activity.AgregarMedico;
 import com.example.medicapp.Adapter.MedicoAdapter;
 import com.example.medicapp.Class.MedicoVo;
+import com.example.medicapp.MainActivity;
 import com.example.medicapp.R;
 
 import java.util.ArrayList;
@@ -31,6 +36,7 @@ public class MedicoFragment extends Fragment {
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
+
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
@@ -39,6 +45,7 @@ public class MedicoFragment extends Fragment {
 
     RecyclerView recyclerMedicos;
     ArrayList<MedicoVo> listaAlarma;
+    FloatingActionButton fab_medico;
 
     public MedicoFragment() {
         // Required empty public constructor
@@ -76,6 +83,15 @@ public class MedicoFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View vista = inflater.inflate(R.layout.fragment_medico, container, false);
+
+        fab_medico = (FloatingActionButton) vista.findViewById(R.id.fab_medico);
+        fab_medico.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getActivity(), AgregarMedico.class));
+            }
+        });
+
         listaAlarma=new ArrayList<>();
         recyclerMedicos= (RecyclerView) vista.findViewById(R.id.recyclerMedico);
         recyclerMedicos.setLayoutManager(new LinearLayoutManager(getContext()));

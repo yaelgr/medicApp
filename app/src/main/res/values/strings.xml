@@ -7,6 +7,18 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
+    <!--  Medico fragment -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="nombre_medico">Nombre del médico</string>
+    <string name="domicilio_medico">Calle, número y colonia</string>
+    <string name="localidad_medico">Localidad y provincia</string>
+    <string name="tlf_medico">Telefono</string>
+    <string name="cel_medico">Celuar</string>
+    <string name="cita">Próxima cita</string>
+    <string name="title_activity_agregar_medicamento">AgregarMedicamento</string>
+    <string name="title_activity_agregar_alarma">AgregarAlarma</string>
+    <string name="btnfecha">Fecha</string>
+    <string name="btnhora">Hora</string>
+    <string name="btnguardar">Guardar</string>
+
 </resources>

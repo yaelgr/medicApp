@@ -1,8 +1,10 @@
 package com.example.medicapp.fragment;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -10,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.medicapp.Activity.AgregarMedicamento;
 import com.example.medicapp.Adapter.MedicamentoAdapter;
 import com.example.medicapp.Class.MedicamentoVo;
 import com.example.medicapp.R;
@@ -39,6 +42,7 @@ public class MedicamentoFragment extends Fragment {
 
     RecyclerView recyclerMedicamentos;
     ArrayList<MedicamentoVo> listaAlarma;
+    FloatingActionButton fab_medicamento;
 
     public MedicamentoFragment() {
         // Required empty public constructor
@@ -76,6 +80,14 @@ public class MedicamentoFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View vista = inflater.inflate(R.layout.fragment_medicamento, container, false);
+
+        fab_medicamento = (FloatingActionButton) vista.findViewById(R.id.fab_medicamento);
+        fab_medicamento.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getActivity(), AgregarMedicamento.class));
+            }
+        });
         listaAlarma=new ArrayList<>();
         recyclerMedicamentos= (RecyclerView) vista.findViewById(R.id.recyclerMedicamento);
         recyclerMedicamentos.setLayoutManager(new LinearLayoutManager(getContext()));

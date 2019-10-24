@@ -1,8 +1,10 @@
 package com.example.medicapp.fragment;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -10,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.medicapp.Activity.AgregarAlarma;
 import com.example.medicapp.Adapter.AlarmaAdapter;
 import com.example.medicapp.Class.AlarmaVo;
 import com.example.medicapp.R;
@@ -40,6 +43,7 @@ public class AlarmaFragment extends Fragment {
 
     RecyclerView recyclerAlarmas;
     ArrayList<AlarmaVo> listaAlarma;
+    FloatingActionButton fab_alarma;
 
     public AlarmaFragment() {
         // Required empty public constructor
@@ -77,6 +81,14 @@ public class AlarmaFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View vista = inflater.inflate(R.layout.fragment_alarma, container, false);
+
+        fab_alarma = (FloatingActionButton) vista.findViewById(R.id.fab_alarma);
+        fab_alarma.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getActivity(), AgregarAlarma.class));
+            }
+        });
         listaAlarma=new ArrayList<>();
         recyclerAlarmas= (RecyclerView) vista.findViewById(R.id.recyclerAlarma);
         recyclerAlarmas.setLayoutManager(new LinearLayoutManager(getContext()));
