@@ -7,6 +7,9 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
+    <!--  global -->
+    <string name="btnguardar">Guardar</string>
+
     <!--  Medico fragment -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="nombre_medico">Nombre del médico</string>
@@ -19,6 +22,27 @@
     <string name="title_activity_agregar_alarma">AgregarAlarma</string>
     <string name="btnfecha">Fecha</string>
     <string name="btnhora">Hora</string>
-    <string name="btnguardar">Guardar</string>
+
+    <!--  Mediccamento fragment -->
+    <string name="btnfechainicio">Desde</string>
+    <string name="btnfechafinal">Hasta</string>
+    <string name="tvfrec">Frecuencia</string>
+    <string name="tvnomAlt">Nombre alterntivo</string>
+    <string-array name="Frecuencia">
+        <item>Cada 30 minutos</item>
+        <item>Cada 1 hora</item>
+        <item>Cada 2 horas</item>
+        <item>Cada 3 horas</item>
+        <item>Cada 4 horas</item>
+        <item>Cada 5 horas</item>
+        <item>Cada 6 horas</item>
+        <item>Cada 7 horas</item>
+        <item>Cada 8 horas</item>
+        <item>Cada 9 horas</item>
+        <item>Cada 10 horas</item>
+        <item>Cada 11 horas</item>
+        <item>Cada 12 horas</item>
+    </string-array>
+
 
 </resources>
