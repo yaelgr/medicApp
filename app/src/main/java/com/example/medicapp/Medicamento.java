@@ -10,7 +10,11 @@ import java.util.Comparator;
  * @author Jaciel Israel Reséndiz Ochoa
  */
 public class Medicamento {
-   String nombre;
+   private String nombre;
+
+    public Medicamento(String data) {
+        this.nombre=data;
+    }
 
     public String getNombre() {
         return nombre;

@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Gray.Gray-Sama\\Desktop\\ingsoft\\medicApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v23\\values-v23.xml",
+            "outputFile": "C:\\Users\\Israel\\AndroidStudioProjects\\MedicApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v23\\values-v23.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Gray.Gray-Sama\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\c9621124a4acd8d440e8001322215ca9\\res\\values-v23\\values-v23.xml",
+                    "source": "C:\\Users\\Israel\\.gradle\\caches\\transforms-2\\files-2.1\\2ad9bfadafd430f8dbad1412b3cf8d16\\appcompat-v7-28.0.0\\res\\values-v23\\values-v23.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,19,32,33,34,35,36",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
@@ -15,7 +15,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Gray.Gray-Sama\\.gradle\\caches\\transforms-1\\files-1.1\\cardview-v7-28.0.0.aar\\11e3a0d94b4bd61bd8d6f854a73abd62\\res\\values-v23\\values-v23.xml",
+                    "source": "C:\\Users\\Israel\\.gradle\\caches\\transforms-2\\files-2.1\\67b0ea41bb31f1300bd726681636eb0e\\cardview-v7-28.0.0\\res\\values-v23\\values-v23.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

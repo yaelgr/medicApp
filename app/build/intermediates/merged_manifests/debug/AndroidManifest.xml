@@ -19,6 +19,27 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name="com.example.medicapp.MainActivity"
+            android:label="@string/title_activity_main"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.medicapp.Activity.customPattern"
+            android:label="@string/title_activity_custom_pattern"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.medicapp.Activity.Login"
+            android:label="@string/title_activity_login"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.medicapp.Activity.AgregarAlarma"
+            android:parentActivityName="com.example.medicapp.MainActivity" />
+        <activity
+            android:name="com.example.medicapp.Activity.AgregarMedicamento"
+            android:parentActivityName="com.example.medicapp.MainActivity" />
+        <activity
+            android:name="com.example.medicapp.Activity.AgregarMedico"
+            android:parentActivityName="com.example.medicapp.MainActivity" />
+        <activity
+            android:name="com.example.medicapp.Activity.PatternLock"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar" >
             <intent-filter>

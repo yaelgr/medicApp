@@ -1,4 +1,0 @@
-#Wed Oct 09 23:51:25 CDT 2019
-base.0=C\:\\Users\\Gray.Gray-Sama\\Desktop\\ingsoft\\medicApp\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\3
-path.0=classes.dex
-renamed.0=classes.dex

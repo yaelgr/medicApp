@@ -2,6 +2,7 @@ package com.example.medicapp.Activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 
 import com.example.medicapp.R;
@@ -17,11 +18,8 @@ public class AgregarAlarma extends AppCompatActivity {
 
         getSupportActionBar().setTitle("Agregar alarma");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-
-
-
-
-
     }
+
+
+
 }

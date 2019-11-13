@@ -86,6 +86,7 @@ public class AlarmaFragment extends Fragment {
     }
 
     private void llenarLista() {
+        // TODO: Rellenar con el resultado de la consulta
         listaAlarma.add(new AlarmaVo("alarma1","7:00 AM"));
         listaAlarma.add(new AlarmaVo("alarma2","8:00 AM"));
         listaAlarma.add(new AlarmaVo("alarma3","9:00 AM"));
