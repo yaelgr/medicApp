@@ -25,7 +25,7 @@
         android:id="@+id/btnFechaInicio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="25dp"
         android:layout_marginTop="68dp"
         android:text="@string/btnfechainicio"
         app:layout_constraintStart_toStartOf="parent"
@@ -35,34 +35,29 @@
         android:id="@+id/txtFechaInicio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
         android:layout_marginTop="68dp"
         android:layout_marginEnd="32dp"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnFechaInicio"
         app:layout_constraintTop_toBottomOf="@+id/searchViewMedicamento" />
 
     <EditText
         android:id="@+id/txtFechaFinal"
-        android:layout_width="215dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="60dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="32dp"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/btnFechaFinal"
         app:layout_constraintTop_toBottomOf="@+id/txtFechaInicio" />
 
     <Button
         android:id="@+id/btnFechaFinal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="25dp"
         android:layout_marginTop="36dp"
         android:text="@string/btnfechafinal"
         app:layout_constraintStart_toStartOf="parent"
@@ -70,32 +65,31 @@
 
     <TextView
         android:id="@+id/tvFrecuencia"
-        android:layout_width="82dp"
-        android:layout_height="28dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="36dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="48dp"
         android:text="@string/tvfrec"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnFechaFinal" />
 
     <Spinner
         android:id="@+id/spinnerFrecuencia"
-        android:layout_width="212dp"
-        android:layout_height="37dp"
-        android:layout_marginStart="41dp"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="60dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="45dp"
         android:entries="@array/Frecuencia"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/tvFrecuencia"
         app:layout_constraintTop_toBottomOf="@+id/txtFechaFinal" />
 
     <TextView
         android:id="@+id/tvnombreAlt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="60dp"
+        android:layout_width="77dp"
+        android:layout_height="73dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="36dp"
+        android:gravity="center"
         android:text="@string/tvnomAlt"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvFrecuencia" />
@@ -104,14 +98,11 @@
         android:id="@+id/txtNombreAlt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
         android:layout_marginTop="44dp"
-        android:layout_marginEnd="60dp"
+        android:layout_marginEnd="32dp"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.963"
-        app:layout_constraintStart_toEndOf="@+id/tvnombreAlt"
         app:layout_constraintTop_toBottomOf="@+id/spinnerFrecuencia" />
 
     <Button

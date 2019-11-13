@@ -1,10 +1,7 @@
 package com.example.medicapp;
 
-import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -14,21 +11,19 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 
 
-import com.example.medicapp.Activity.AgregarMedico;
 import com.example.medicapp.fragment.AlarmaFragment;
 import com.example.medicapp.fragment.ConfiguracionFragment;
-import com.example.medicapp.fragment.HistorialFragment;
+import com.example.medicapp.fragment.InicioFragment;
 import com.example.medicapp.fragment.MedicamentoFragment;
 import com.example.medicapp.fragment.MedicoFragment;
 
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, AlarmaFragment.OnFragmentInteractionListener, MedicoFragment.OnFragmentInteractionListener,
-        MedicamentoFragment.OnFragmentInteractionListener, HistorialFragment.OnFragmentInteractionListener, ConfiguracionFragment.OnFragmentInteractionListener
-       {
+        MedicamentoFragment.OnFragmentInteractionListener, ConfiguracionFragment.OnFragmentInteractionListener,
+        InicioFragment.OnFragmentInteractionListener{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,9 +58,13 @@ public class MainActivity extends AppCompatActivity
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
+        Fragment fragment = new InicioFragment();
+        getSupportFragmentManager().beginTransaction().add(R.id.content_main,fragment).commit();
+
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setItemIconTintList(null);
         navigationView.setNavigationItemSelectedListener(this);
+
     }
 
     @Override
@@ -118,14 +117,10 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_medicamento) {
             myfragment=new MedicamentoFragment();
             fragmentselected=true;
-        } else if (id == R.id.nav_historial) {
-            myfragment=new HistorialFragment();
-            fragmentselected=true;
         } else if (id == R.id.nav_configuracion) {
             myfragment=new ConfiguracionFragment();
             fragmentselected=true;
         }
-
         if (fragmentselected==true){
             getSupportFragmentManager().beginTransaction().replace(R.id.content_main,myfragment).commit();
         }

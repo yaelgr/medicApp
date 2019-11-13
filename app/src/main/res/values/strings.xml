@@ -16,7 +16,7 @@
     <string name="domicilio_medico">Calle, número y colonia</string>
     <string name="localidad_medico">Localidad y provincia</string>
     <string name="tlf_medico">Telefono</string>
-    <string name="cel_medico">Celuar</string>
+    <string name="cel_medico">Celular</string>
     <string name="cita">Próxima cita</string>
     <string name="title_activity_agregar_medicamento">AgregarMedicamento</string>
     <string name="title_activity_agregar_alarma">AgregarAlarma</string>
@@ -43,6 +43,10 @@
         <item>Cada 11 horas</item>
         <item>Cada 12 horas</item>
     </string-array>
+    <string name="title_activity_pattern_lock">PatternLock</string>
+    <string name="title_activity_main">MedicApp</string>
+    <string name="title_activity_login">Login</string>
+    <string name="title_activity_custom_pattern">customPattern</string>
 
 
 </resources>
