@@ -4,11 +4,17 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.medicapp.Adapter.InicioAdapter;
+import com.example.medicapp.Class.InicioVo;
 import com.example.medicapp.R;
+
+import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -29,6 +35,9 @@ public class InicioFragment extends Fragment {
     private String mParam2;
 
     private OnFragmentInteractionListener mListener;
+
+    RecyclerView recyclerInicio;
+    ArrayList<InicioVo> listaAlarma;
 
     public InicioFragment() {
         // Required empty public constructor
@@ -65,9 +74,29 @@ public class InicioFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_inicio, container, false);
-    }
+    View vista = inflater.inflate(R.layout.fragment_inicio, container, false);
 
+    listaAlarma=new ArrayList<>();
+    recyclerInicio= (RecyclerView) vista.findViewById(R.id.recyclerInicio);
+        recyclerInicio.setLayoutManager(new LinearLayoutManager(getContext()));
+
+    llenarLista();
+
+    InicioAdapter adapter=new InicioAdapter(listaAlarma);
+        recyclerInicio.setAdapter(adapter);
+
+        return vista;
+}
+
+    private void llenarLista() {
+        listaAlarma.add(new InicioVo("medico","7:00 AM"));
+        listaAlarma.add(new InicioVo("alarma","8:00 AM"));
+        listaAlarma.add(new InicioVo("Medicamento2","9:00 AM"));
+        listaAlarma.add(new InicioVo("alarma","10:00 AM"));
+        listaAlarma.add(new InicioVo("Medicamento2","11:00 AM"));
+
+
+    }
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
         if (mListener != null) {

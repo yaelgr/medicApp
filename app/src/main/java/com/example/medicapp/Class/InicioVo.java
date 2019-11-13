@@ -1,11 +1,11 @@
 package com.example.medicapp.Class;
 
-public class MedicamentoVo {
+public class InicioVo {
 
     private String nombre;
     private String hora;
 
-    public MedicamentoVo(String nombre, String hora) {
+    public InicioVo(String nombre, String hora) {
         this.nombre = nombre;
         this.hora = hora;
     }
@@ -25,4 +25,6 @@ public class MedicamentoVo {
     public void setHoraAlarma(String info) {
         this.hora = hora;
     }
+
+
 }

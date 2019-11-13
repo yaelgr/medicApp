@@ -10,6 +10,7 @@
     <!--  global -->
     <string name="btnguardar">Guardar</string>
 
+
     <!--  Medico fragment -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="nombre_medico">Nombre del médico</string>
@@ -47,6 +48,7 @@
     <string name="title_activity_main">MedicApp</string>
     <string name="title_activity_login">Login</string>
     <string name="title_activity_custom_pattern">customPattern</string>
+    <string name="title_activity_inicio_fragment">InicioFragment</string>
 
 
 </resources>

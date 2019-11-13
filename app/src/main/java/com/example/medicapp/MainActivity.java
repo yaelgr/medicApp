@@ -13,7 +13,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 
-import com.example.medicapp.fragment.AlarmaFragment;
 import com.example.medicapp.fragment.ConfiguracionFragment;
 import com.example.medicapp.fragment.InicioFragment;
 import com.example.medicapp.fragment.MedicamentoFragment;
@@ -21,9 +20,8 @@ import com.example.medicapp.fragment.MedicoFragment;
 
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener, AlarmaFragment.OnFragmentInteractionListener, MedicoFragment.OnFragmentInteractionListener,
-        MedicamentoFragment.OnFragmentInteractionListener, ConfiguracionFragment.OnFragmentInteractionListener,
-        InicioFragment.OnFragmentInteractionListener{
+        implements NavigationView.OnNavigationItemSelectedListener, InicioFragment.OnFragmentInteractionListener,
+        MedicoFragment.OnFragmentInteractionListener, MedicamentoFragment.OnFragmentInteractionListener, ConfiguracionFragment.OnFragmentInteractionListener{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,6 +58,7 @@ public class MainActivity extends AppCompatActivity
 
         Fragment fragment = new InicioFragment();
         getSupportFragmentManager().beginTransaction().add(R.id.content_main,fragment).commit();
+
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setItemIconTintList(null);
@@ -108,10 +107,10 @@ public class MainActivity extends AppCompatActivity
         Fragment myfragment=null;
         boolean fragmentselected=false;
 
-        if (id == R.id.nav_alarma) {
-            myfragment=new AlarmaFragment();
-            fragmentselected=true;
-        } else if (id == R.id.nav_medico) {
+        if (id == R.id.nav_inicio) {
+            myfragment=new InicioFragment();
+            fragmentselected=true;}
+        else if (id == R.id.nav_medico) {
             myfragment=new MedicoFragment();
             fragmentselected=true;
         } else if (id == R.id.nav_medicamento) {

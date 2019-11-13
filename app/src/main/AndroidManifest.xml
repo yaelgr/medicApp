@@ -12,18 +12,15 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/title_activity_main"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Activity.customPattern"
             android:label="@string/title_activity_custom_pattern"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Activity.Login"
             android:label="@string/title_activity_login"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".Activity.AgregarAlarma"
-            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".Activity.AgregarMedicamento"
             android:parentActivityName=".MainActivity" />
