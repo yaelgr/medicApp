@@ -16,75 +16,49 @@
 
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/txtMedico"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="36dp"
         android:layout_marginEnd="8dp"
+        android:background="@drawable/edit_round"
         android:ems="10"
         android:hint="@string/nombre_medico"
-        android:background="@drawable/edit_round"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editText3"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="8dp"
-        android:ems="10"
-        android:hint="@string/domicilio_medico"
-        android:background="@drawable/edit_round"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText2" />
-
-    <EditText
-        android:id="@+id/editText4"
+        android:id="@+id/txtDomicilio"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="8dp"
-        android:ems="10"
-        android:hint="@string/localidad_medico"
         android:background="@drawable/edit_round"
+        android:ems="10"
+        android:hint="@string/domicilio_medico"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText3" />
+        app:layout_constraintTop_toBottomOf="@+id/txtMedico" />
 
     <EditText
-        android:id="@+id/editText6"
-        android:layout_width="170dp"
-        android:layout_height="wrap_content"
+        android:id="@+id/txtTel"
+        android:layout_width="373dp"
+        android:layout_height="32dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/edit_round"
         android:ems="10"
         android:hint="@string/tlf_medico"
-        android:background="@drawable/edit_round"
         android:inputType="phone"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText4" />
-
-    <EditText
-        android:id="@+id/editText7"
-        android:layout_width="170dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:layout_marginEnd="8dp"
-        android:ems="10"
-        android:hint="@string/cel_medico"
-        android:background="@drawable/edit_round"
-        android:inputType="phone"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText4" />
+        app:layout_constraintTop_toBottomOf="@+id/txtDomicilio" />
 
     <Button
         android:id="@+id/btnFecha"
@@ -94,7 +68,7 @@
         android:layout_marginTop="50dp"
         android:text="@string/btnfecha"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText6" />
+        app:layout_constraintTop_toBottomOf="@+id/txtTel" />
 
     <Button
         android:id="@+id/btnHora"
@@ -110,23 +84,23 @@
         android:id="@+id/txtFecha"
         android:layout_width="170dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/edit_round"
         android:ems="10"
         android:inputType="textPersonName"
-        android:background="@drawable/edit_round"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText7" />
+        app:layout_constraintTop_toBottomOf="@+id/txtTel" />
 
     <EditText
         android:id="@+id/txtHora"
         android:layout_width="170dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="4dp"
+        android:background="@drawable/edit_round"
         android:ems="10"
         android:inputType="textPersonName"
-        android:background="@drawable/edit_round"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtFecha" />
 
@@ -144,7 +118,7 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnHora"
-        app:layout_constraintVertical_bias="0.941" />
+        app:layout_constraintVertical_bias="0.48" />
 
 </android.support.constraint.ConstraintLayout>
 </ScrollView>
