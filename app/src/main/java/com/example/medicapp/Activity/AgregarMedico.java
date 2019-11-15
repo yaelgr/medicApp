@@ -1,7 +1,9 @@
 package com.example.medicapp.Activity;
 
+import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
+import android.content.DialogInterface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -10,14 +12,16 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TimePicker;
 
+import com.example.medicapp.Class.Doctor;
+import com.example.medicapp.Class.Medicamento;
 import com.example.medicapp.R;
 
 import java.util.Calendar;
 
 public class AgregarMedico extends AppCompatActivity implements View.OnClickListener {
 
-    Button btnFecha, btnHora;
-    EditText txtFecha, txtHora;
+    Button btnFecha, btnHora, btnGuardar;
+    EditText txtFecha, txtHora, txtMedico,txtDomicilio,txtTel;
     int dia,mes,año,hora,minutos;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +36,10 @@ public class AgregarMedico extends AppCompatActivity implements View.OnClickList
         btnHora = (Button) findViewById(R.id.btnHora);
         txtFecha = (EditText) findViewById(R.id.txtFecha);
         txtHora = (EditText) findViewById(R.id.txtHora);
+        txtMedico= (EditText)findViewById(R.id.txtMedico);
+        txtDomicilio= (EditText)findViewById(R.id.txtDomicilio);
+        txtTel= (EditText)findViewById(R.id.txtTel);
+        btnGuardar=(Button) findViewById(R.id.btnGuardar);
 
         btnFecha.setOnClickListener(this);
         btnHora.setOnClickListener(this);
@@ -71,5 +79,46 @@ public class AgregarMedico extends AppCompatActivity implements View.OnClickList
             timerPickerDialog.show();
         }
 
+        if (v == btnGuardar) {
+            Doctor med;
+            boolean hasname = (txtMedico.getText()!=null), hasdate1 = (txtFecha.getText() != null),
+                    hasdate2 = (txtHora.getText() != null);
+            if(!hasname){
+
+                AlertDialog.Builder dlgAlert  = new AlertDialog.Builder(this);
+                dlgAlert.setMessage("No se puede guardar un medico sin nombre");
+                dlgAlert.setTitle("Alerta");
+                dlgAlert.setPositiveButton("OK", null);
+                dlgAlert.setCancelable(true);
+                dlgAlert.create().show();
+
+                dlgAlert.setPositiveButton("Ok",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                //dismiss the dialog
+                            }
+                        });
+            }
+            if(!hasdate1 || !hasdate2){
+                AlertDialog.Builder dlgAlert  = new AlertDialog.Builder(this);
+                dlgAlert.setMessage("La fecha y hora no es correcta");
+                dlgAlert.setTitle("Alerta");
+                dlgAlert.setPositiveButton("OK", null);
+                dlgAlert.setCancelable(true);
+                dlgAlert.create().show();
+
+                dlgAlert.setPositiveButton("Ok",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                //dismiss the dialog
+                            }
+                        });
+            }
+
+            if (hasdate1 && hasdate2 && hasname){
+                med=new Doctor(txtMedico.getText().toString().trim());
+            }
+
+        }
     }
 }
