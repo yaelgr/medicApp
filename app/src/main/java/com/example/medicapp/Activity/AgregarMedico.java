@@ -116,7 +116,16 @@ public class AgregarMedico extends AppCompatActivity implements View.OnClickList
             }
 
             if (hasdate1 && hasdate2 && hasname){
-                med=new Doctor(txtMedico.getText().toString().trim());
+                if (txtDomicilio.getText().toString().trim() != null && txtTel.getText().toString().trim() != null){
+                    med=new Doctor(txtMedico.getText().toString().trim(),txtTel.toString().trim(),txtDomicilio.getText().toString().trim());
+                }else if (txtDomicilio.getText().toString().trim() != null ){
+                    med=new Doctor(txtMedico.getText().toString().trim(),txtDomicilio.toString().trim(),'d');
+                }else if (txtTel.getText().toString().trim() != null ){
+                    med=new Doctor(txtMedico.getText().toString().trim(),txtTel.toString().trim());
+                }else {
+                    med=new Doctor(txtMedico.getText().toString().trim());
+                }
+
             }
 
         }
