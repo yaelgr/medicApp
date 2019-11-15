@@ -9,6 +9,16 @@ public class Doctor {
     String telefono;
     String direccion;
 
+    public Doctor(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public Doctor(String nombre, String telefono, String direccion) {
+        this.nombre = nombre;
+        this.telefono = telefono;
+        this.direccion = direccion;
+    }
+
     public String getNombre() {
         return nombre;
     }
