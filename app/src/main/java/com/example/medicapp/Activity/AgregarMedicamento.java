@@ -1,10 +1,7 @@
 package com.example.medicapp.Activity;
-import android.app.AlertDialog;
-import android.content.DialogInterface;
-import android.widget.SearchView;
+
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
-import android.content.DialogInterface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -16,14 +13,13 @@ import android.widget.Spinner;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
-import com.example.medicapp.Class.Medicamento;
 import com.example.medicapp.R;
 
 import java.util.Calendar;
 
 public class AgregarMedicamento extends AppCompatActivity implements View.OnClickListener, AdapterView.OnItemSelectedListener {
-    Button btnFechaInicio, btnFechaFinal, btnAceptar;
-    EditText txtFechaInicio, txtFechaFinal,searchViewMedicamento;
+    Button btnFechaInicio, btnFechaFinal;
+    EditText txtFechaInicio, txtFechaFinal;
     int dia, mes, año;
 
     @Override
@@ -39,13 +35,10 @@ public class AgregarMedicamento extends AppCompatActivity implements View.OnClic
         txtFechaInicio = (EditText) findViewById(R.id.txtFechaInicio);
         txtFechaFinal = (EditText) findViewById(R.id.txtFechaFinal);
         Spinner spinnerFrec = findViewById(R.id.spinnerFrecuencia);
-        searchViewMedicamento=(EditText) findViewById(R.id.searchViewMedicamento);
-
 
 
         btnFechaInicio.setOnClickListener(this);
         btnFechaFinal.setOnClickListener(this);
-        btnAceptar.setOnClickListener(this);
         spinnerFrec.setOnItemSelectedListener(this);
 
 
@@ -85,48 +78,6 @@ public class AgregarMedicamento extends AppCompatActivity implements View.OnClic
             }
                     , dia, mes, año);
             datePickerDialog.show();
-        }
-
-        if (v == btnAceptar) {
-            Medicamento med;
-            boolean hasname = (searchViewMedicamento.getText()!=null), hasdate1 = (txtFechaFinal.getText() != null),
-                    hasdate2 = (txtFechaInicio.getText() != null);
-            if(!hasname){
-
-                AlertDialog.Builder dlgAlert  = new AlertDialog.Builder(this);
-                dlgAlert.setMessage("No se puede guardar un medicamento con nombre vacío");
-                dlgAlert.setTitle("Alerta");
-                dlgAlert.setPositiveButton("OK", null);
-                dlgAlert.setCancelable(true);
-                dlgAlert.create().show();
-
-                dlgAlert.setPositiveButton("Ok",
-                        new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int which) {
-                                //dismiss the dialog
-                            }
-                        });
-            }
-            if(!hasdate1 || !hasdate2){
-                AlertDialog.Builder dlgAlert  = new AlertDialog.Builder(this);
-                dlgAlert.setMessage("Las fechas no son correctas");
-                dlgAlert.setTitle("Alerta");
-                dlgAlert.setPositiveButton("OK", null);
-                dlgAlert.setCancelable(true);
-                dlgAlert.create().show();
-
-                dlgAlert.setPositiveButton("Ok",
-                        new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int which) {
-                                //dismiss the dialog
-                            }
-                        });
-            }
-
-            if (hasdate1 && hasdate2 && hasname){
-                med=new Medicamento(searchViewMedicamento.getText().toString());
-            }
-
         }
     }
 

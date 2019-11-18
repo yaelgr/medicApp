@@ -4,11 +4,17 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.medicapp.Adapter.ConfigAdapter;
+import com.example.medicapp.Class.ConfigVo;
 import com.example.medicapp.R;
+
+import java.util.ArrayList;
 
 
 /**
@@ -30,6 +36,9 @@ public class ConfiguracionFragment extends Fragment {
     private String mParam2;
 
     private OnFragmentInteractionListener mListener;
+
+    RecyclerView recyclerConfig;
+    ArrayList<ConfigVo> listaAlarma;
 
     public ConfiguracionFragment() {
         // Required empty public constructor
@@ -66,9 +75,30 @@ public class ConfiguracionFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_configuracion, container, false);
+        View vista = inflater.inflate(R.layout.fragment_configuracion, container, false);
+
+
+        listaAlarma=new ArrayList<>();
+        recyclerConfig= (RecyclerView) vista.findViewById(R.id.recyclerConfig);
+        recyclerConfig.setLayoutManager(new LinearLayoutManager(getContext()));
+
+        llenarLista();
+
+        ConfigAdapter adapter=new ConfigAdapter(listaAlarma);
+        recyclerConfig.setAdapter(adapter);
+
+        return vista;
     }
 
+    private void llenarLista() {
+        listaAlarma.add(new ConfigVo("Ajustes globales de alarmas","Cambio de tono, Configuración de frecuencia predeterminda", R.drawable.ic_config_alarma));
+        listaAlarma.add(new ConfigVo("Registro de citas medicas","Borrar historial, respaldar el registro en archivo externo", R.drawable.ic_config_google));
+        listaAlarma.add(new ConfigVo("Conexion con google assistant","Acerca de", R.drawable.ic_config_acercade));
+
+
+
+
+    }
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
         if (mListener != null) {

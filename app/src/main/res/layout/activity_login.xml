@@ -6,28 +6,20 @@
     android:layout_height="match_parent"
     tools:context=".Activity.Login">
 
-    <android.support.design.widget.AppBarLayout
-        android:layout_width="match_parent"
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay">
-
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
-
-    </android.support.design.widget.AppBarLayout>
-
-    <include layout="@layout/content_login" />
+        android:text="Iingresa tu patrón de desbloqueo"
+        android:layout_centerHorizontal="true"/>
 
     <com.andrognito.patternlockview.PatternLockView
         android:id="@+id/pattern_lock_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:correctStateColor="@color/colorPrimary"
+        app:correctStateColor="@color/colorCorrect"
         app:normalStateColor="@color/colorPrimaryDark"
-        app:wrongStateColor="@color/pomegranate"/>
+        app:wrongStateColor="@color/pomegranate" />
 
 </RelativeLayout>

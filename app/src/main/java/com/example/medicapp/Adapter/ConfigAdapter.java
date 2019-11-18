@@ -1,5 +1,6 @@
 package com.example.medicapp.Adapter;
 
+import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -7,33 +8,32 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.medicapp.Class.InicioVo;
+import com.example.medicapp.Class.ConfigVo;
 import com.example.medicapp.R;
 
 import java.util.ArrayList;
 
-public class InicioAdapter extends RecyclerView.Adapter<InicioAdapter.InicioViewHolder> {
+public class ConfigAdapter extends RecyclerView.Adapter<ConfigAdapter.ConfigViewHolder>  {
 
-
-    public InicioAdapter(ArrayList<InicioVo> listaAlarma) {
+    public ConfigAdapter(ArrayList<ConfigVo> listaAlarma) {
         this.listaAlarma = listaAlarma;
     }
 
-    ArrayList<InicioVo> listaAlarma;
+    ArrayList<ConfigVo> listaAlarma;
 
     @Override
-    public InicioViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public ConfigViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.item_list, null, false);
         view.setLayoutParams(new RecyclerView.LayoutParams(RecyclerView.LayoutParams.MATCH_PARENT, RecyclerView.LayoutParams.WRAP_CONTENT));
 
-        return new InicioViewHolder(view);
+        return new ConfigViewHolder(view);
     }
 
-
     @Override
-    public void onBindViewHolder(InicioViewHolder holder, int position) {
-        holder.txtNombreAlarma.setText(listaAlarma.get(position).getNombreAlarma());
-        holder.txtHoraAlarma.setText(listaAlarma.get(position).getHoraAlarma());
+    public void onBindViewHolder(ConfigViewHolder holder, int position) {
+        holder.txtNombreAlarma.setText(listaAlarma.get(position).getTitulo());
+        holder.txtHoraAlarma.setText(listaAlarma.get(position).getDesc());
+        holder.imagen.setImageResource(listaAlarma.get(position).getImagen());
     }
 
     @Override
@@ -41,13 +41,14 @@ public class InicioAdapter extends RecyclerView.Adapter<InicioAdapter.InicioView
         return listaAlarma.size();
     }
 
-    public class InicioViewHolder extends RecyclerView.ViewHolder {
+    public class ConfigViewHolder extends RecyclerView.ViewHolder {
         TextView txtNombreAlarma,txtHoraAlarma;
-        ImageView foto;
-        public InicioViewHolder(View itemView) {
+        ImageView imagen;
+        public ConfigViewHolder(View itemView) {
             super(itemView);
             txtNombreAlarma= (TextView) itemView.findViewById(R.id.idNombreAlarma);
             txtHoraAlarma= (TextView) itemView.findViewById(R.id.idHoraAlarma);
+            imagen= (ImageView) itemView.findViewById(R.id.idImagen);
         }
     }
 }

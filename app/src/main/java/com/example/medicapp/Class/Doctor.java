@@ -9,26 +9,6 @@ public class Doctor {
     String telefono;
     String direccion;
 
-    public Doctor(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public Doctor(String nombre, String telefono, String direccion) {
-        this.nombre = nombre;
-        this.telefono = telefono;
-        this.direccion = direccion;
-    }
-
-    public Doctor(String nombre, String direccion,char d) {
-        this.nombre = nombre;
-        this.direccion = direccion;
-    }
-
-    public Doctor(String nombre, String telefono) {
-        this.nombre = nombre;
-        this.telefono = telefono;
-    }
-
     public String getNombre() {
         return nombre;
     }

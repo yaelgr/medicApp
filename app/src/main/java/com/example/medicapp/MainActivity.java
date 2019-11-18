@@ -56,6 +56,7 @@ public class MainActivity extends AppCompatActivity
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
+
         Fragment fragment = new InicioFragment();
         getSupportFragmentManager().beginTransaction().add(R.id.content_main,fragment).commit();
 

@@ -18,7 +18,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|center"
         android:layout_margin="@dimen/nav_header_vertical_spacing"
-        app:backgroundTint="@color/colorPrimaryDark"
+        app:backgroundTint="@color/colorSecundary"
         app:fabCustomSize="@android:dimen/app_icon_size"
         app:srcCompat="@drawable/ic_mas" />
 

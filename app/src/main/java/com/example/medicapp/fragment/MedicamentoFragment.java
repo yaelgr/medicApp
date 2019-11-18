@@ -64,6 +64,7 @@ public class MedicamentoFragment extends Fragment {
         args.putString(ARG_PARAM2, param2);
         fragment.setArguments(args);
         return fragment;
+
     }
 
     @Override
@@ -73,6 +74,7 @@ public class MedicamentoFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
     }
 
     @Override
@@ -80,6 +82,8 @@ public class MedicamentoFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View vista = inflater.inflate(R.layout.fragment_medicamento, container, false);
+
+
 
         fab_medicamento = (FloatingActionButton) vista.findViewById(R.id.fab_medicamento);
         fab_medicamento.setOnClickListener(new View.OnClickListener() {

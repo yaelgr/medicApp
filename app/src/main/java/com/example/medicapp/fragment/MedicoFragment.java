@@ -84,6 +84,8 @@ public class MedicoFragment extends Fragment {
         // Inflate the layout for this fragment
         View vista = inflater.inflate(R.layout.fragment_medico, container, false);
 
+
+
         fab_medico = (FloatingActionButton) vista.findViewById(R.id.fab_medico);
         fab_medico.setOnClickListener(new View.OnClickListener() {
             @Override
