@@ -26,7 +26,7 @@ public class MedicamentoAdapter extends RecyclerView.Adapter<MedicamentoAdapter.
     public MedicamentoViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
         View view= LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.item_list, null, false);
+                .inflate(R.layout.item_list_medicamento, null, false);
         view.setLayoutParams(new RecyclerView.LayoutParams(RecyclerView.LayoutParams.MATCH_PARENT, RecyclerView.LayoutParams.WRAP_CONTENT));
 
         return new MedicamentoViewHolder(view);
@@ -34,8 +34,11 @@ public class MedicamentoAdapter extends RecyclerView.Adapter<MedicamentoAdapter.
 
     @Override
     public void onBindViewHolder( MedicamentoViewHolder holder, int position) {
-        holder.txtNombreAlarma.setText(listaAlarma.get(position).getNombreAlarma());
-        holder.txtHoraAlarma.setText(listaAlarma.get(position).getHoraAlarma());
+        holder.txtNombre.setText(listaAlarma.get(position).getNombre());
+        holder.txtNombreAlt.setText(listaAlarma.get(position).getNombreAlt());
+        holder.txtFechaInicial.setText(listaAlarma.get(position).getFechaInicial());
+        holder.txtFechaFinal.setText(listaAlarma.get(position).getFechaFinal());
+        holder.txtFrecuencia.setText(listaAlarma.get(position).getFrecuencia());
     }
 
     @Override
@@ -44,12 +47,15 @@ public class MedicamentoAdapter extends RecyclerView.Adapter<MedicamentoAdapter.
     }
 
     public class MedicamentoViewHolder extends RecyclerView.ViewHolder {
-        TextView txtNombreAlarma,txtHoraAlarma;
+        TextView txtNombre,txtNombreAlt, txtFechaInicial, txtFechaFinal, txtFrecuencia;
         ImageView foto;
         public MedicamentoViewHolder(View itemView) {
             super(itemView);
-            txtNombreAlarma= (TextView) itemView.findViewById(R.id.idNombreAlarma);
-            txtHoraAlarma= (TextView) itemView.findViewById(R.id.idHoraAlarma);
+            txtNombre= (TextView) itemView.findViewById(R.id.idNombre);
+           txtNombreAlt= (TextView) itemView.findViewById(R.id.idnombreAlt);
+            txtFechaInicial= (TextView) itemView.findViewById(R.id.idFechaInicial);
+            txtFechaFinal= (TextView) itemView.findViewById(R.id.idFechaFinal);
+            txtFrecuencia= (TextView) itemView.findViewById(R.id.idFrecuencia);
         }
     }
 }

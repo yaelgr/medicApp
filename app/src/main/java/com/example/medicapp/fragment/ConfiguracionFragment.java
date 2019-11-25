@@ -1,17 +1,25 @@
 package com.example.medicapp.fragment;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import com.example.medicapp.Adapter.ConfigAdapter;
 import com.example.medicapp.Class.ConfigVo;
+import com.example.medicapp.Class.DialogFrag_Acerca;
+import com.example.medicapp.Class.DialogFrag_Ajustes;
+import com.example.medicapp.Class.DialogFrag_Google;
+import com.example.medicapp.Class.DialogFrag_Historial;
 import com.example.medicapp.R;
 
 import java.util.ArrayList;
@@ -37,8 +45,12 @@ public class ConfiguracionFragment extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    RecyclerView recyclerConfig;
-    ArrayList<ConfigVo> listaAlarma;
+   private CardView cardViewAjustes;
+   private CardView cardViewHistorial;
+   private CardView cardViewGoogle;
+   private CardView cardViewAcerca;
+
+   private ImageView imgAjustes;
 
     public ConfiguracionFragment() {
         // Required empty public constructor
@@ -77,28 +89,84 @@ public class ConfiguracionFragment extends Fragment {
         // Inflate the layout for this fragment
         View vista = inflater.inflate(R.layout.fragment_configuracion, container, false);
 
+        cardViewAjustes = vista.findViewById(R.id.cardViewAjustes);
+        cardViewHistorial = vista.findViewById(R.id.cardViewHistorial);
+        cardViewGoogle = vista.findViewById(R.id.cardViewGoogle);
+        cardViewAcerca = vista.findViewById(R.id.cardViewAcerca);
 
-        listaAlarma=new ArrayList<>();
-        recyclerConfig= (RecyclerView) vista.findViewById(R.id.recyclerConfig);
-        recyclerConfig.setLayoutManager(new LinearLayoutManager(getContext()));
+        cardViewAjustes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
-        llenarLista();
+                DialogFrag_Ajustes dialog = new DialogFrag_Ajustes();
+                dialog.show(getFragmentManager(), "DialogFragAjustes");
 
-        ConfigAdapter adapter=new ConfigAdapter(listaAlarma);
-        recyclerConfig.setAdapter(adapter);
+                       /* MedicamentoFragment nuevoFragmento = new MedicamentoFragment();
+                        FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                        transaction.replace(R.id.content_main, nuevoFragmento);
+                        transaction.addToBackStack(null);
+
+                        // Commit a la transacción
+                        transaction.commit();*/
+            }
+        });
+
+        cardViewHistorial.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                DialogFrag_Historial dialog = new DialogFrag_Historial();
+                dialog.show(getFragmentManager(), "DialogFragHistorial");
+
+
+                       /* MedicamentoFragment nuevoFragmento = new MedicamentoFragment();
+                        FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                        transaction.replace(R.id.content_main, nuevoFragmento);
+                        transaction.addToBackStack(null);
+
+                        // Commit a la transacción
+                        transaction.commit();*/
+            }
+        });
+
+        cardViewGoogle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                DialogFrag_Google dialog = new DialogFrag_Google();
+                dialog.show(getFragmentManager(), "DialogFragGoogle");
+
+                       /* MedicamentoFragment nuevoFragmento = new MedicamentoFragment();
+                        FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                        transaction.replace(R.id.content_main, nuevoFragmento);
+                        transaction.addToBackStack(null);
+
+                        // Commit a la transacción
+                        transaction.commit();*/
+            }
+        });
+        cardViewAcerca.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                DialogFrag_Acerca dialog = new DialogFrag_Acerca();
+                dialog.show(getFragmentManager(), "DialogFragAcerca");
+
+                       /* MedicamentoFragment nuevoFragmento = new MedicamentoFragment();
+                        FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                        transaction.replace(R.id.content_main, nuevoFragmento);
+                        transaction.addToBackStack(null);
+
+                        // Commit a la transacción
+                        transaction.commit();*/
+            }
+        });
 
         return vista;
     }
 
-    private void llenarLista() {
-        listaAlarma.add(new ConfigVo("Ajustes globales de alarmas","Cambio de tono, Configuración de frecuencia predeterminda", R.drawable.ic_config_alarma));
-        listaAlarma.add(new ConfigVo("Registro de citas medicas","Borrar historial, respaldar el registro en archivo externo", R.drawable.ic_config_google));
-        listaAlarma.add(new ConfigVo("Conexion con google assistant","Acerca de", R.drawable.ic_config_acercade));
 
 
-
-
-    }
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
         if (mListener != null) {

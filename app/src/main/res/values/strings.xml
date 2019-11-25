@@ -29,26 +29,50 @@
     <string name="btnfechafinal">Hasta</string>
     <string name="tvfrec">Frecuencia</string>
     <string name="tvnomAlt">Nombre alterntivo</string>
-    <string-array name="Frecuencia">
-        <item>Cada 30 minutos</item>
-        <item>Cada 1 hora</item>
-        <item>Cada 2 horas</item>
-        <item>Cada 3 horas</item>
-        <item>Cada 4 horas</item>
-        <item>Cada 5 horas</item>
-        <item>Cada 6 horas</item>
-        <item>Cada 7 horas</item>
-        <item>Cada 8 horas</item>
-        <item>Cada 9 horas</item>
-        <item>Cada 10 horas</item>
-        <item>Cada 11 horas</item>
-        <item>Cada 12 horas</item>
+
+    <string-array name="FrecuenciaMin">
+        <item>0</item>
+        <item>5</item>
+        <item>15</item>
+        <item>30</item>
+        <item>45</item>
+    </string-array>
+    <string-array name="FrecuenciaHrs">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
     </string-array>
     <string name="title_activity_pattern_lock">PatternLock</string>
     <string name="title_activity_main">MedicApp</string>
     <string name="title_activity_login">Login</string>
     <string name="title_activity_custom_pattern">customPattern</string>
     <string name="title_activity_inicio_fragment">InicioFragment</string>
+
+
+    <!--  Fragment configuracion -->
+    <string name="tituloAjustes">Ajustes globales de alarmas</string>
+    <string name="tituloHistorial">Historial de alarmas y citas médicas</string>
+    <string name="tituloGoogle">Conexión con google assistant</string>
+    <string name="TituloAcerca">Acerca del desarrollo de esta aplicación</string>
+
+    <!--  Dialog Acerca de -->
+    <string name="ProyectoDesc">Esta aplicacion ha sido desarrollada por: Diego Yael Gomez Rosalio,
+    Angel y Jaciel de la Facultad de informática en la Universidad Autónoma de Querétaro. Se ha utilizado
+    Android studio para el desarrollo teninedo como requerimiento de android minimo 4.4 </string>
+    <string name="DialogHistorial"> A continuacion se muestra el historial</string>
+    <string name="DialogGoogle"> Informacion de google assistant</string>
+    <string name="DialogAjustes">Ajustes</string>
+
 
 
 

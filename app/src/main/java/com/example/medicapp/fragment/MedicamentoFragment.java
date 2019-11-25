@@ -105,11 +105,8 @@ public class MedicamentoFragment extends Fragment {
     }
 
     private void llenarLista() {
-        listaAlarma.add(new MedicamentoVo("Medicamento2","7:00 AM"));
-        listaAlarma.add(new MedicamentoVo("Medicamento2","8:00 AM"));
-        listaAlarma.add(new MedicamentoVo("Medicamento2","9:00 AM"));
-        listaAlarma.add(new MedicamentoVo("Medicamento2","10:00 AM"));
-        listaAlarma.add(new MedicamentoVo("Medicamento2","11:00 AM"));
+        listaAlarma.add(new MedicamentoVo("Medicamento1","paracetamol", "10/10/10", "11/11/11", "8"));
+        listaAlarma.add(new MedicamentoVo("Medicamento2","jarabe tos", "11/11/11", "12/12/12", "10"));
 
 
     }

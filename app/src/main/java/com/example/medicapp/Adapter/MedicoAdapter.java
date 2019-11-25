@@ -25,7 +25,7 @@ public class MedicoAdapter extends RecyclerView.Adapter<MedicoAdapter.MedicoView
     public MedicoViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
         View view= LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.item_list, null, false);
+                .inflate(R.layout.item_list_medico, null, false);
         view.setLayoutParams(new RecyclerView.LayoutParams(RecyclerView.LayoutParams.MATCH_PARENT, RecyclerView.LayoutParams.WRAP_CONTENT));
 
         return new MedicoViewHolder(view);
@@ -33,8 +33,11 @@ public class MedicoAdapter extends RecyclerView.Adapter<MedicoAdapter.MedicoView
 
     @Override
     public void onBindViewHolder(MedicoViewHolder holder, int position) {
-        holder.txtNombreAlarma.setText(listaAlarma.get(position).getNombreAlarma());
-        holder.txtHoraAlarma.setText(listaAlarma.get(position).getHoraAlarma());
+        holder.txtNombre.setText(listaAlarma.get(position).getNombre());
+        holder.txtdomicilio.setText(listaAlarma.get(position).getDomicilio());
+        holder.txttelefono.setText(listaAlarma.get(position).getTelefono());
+        holder.txtfecha.setText(listaAlarma.get(position).getFecha());
+        holder.txtHora.setText(listaAlarma.get(position).getHora());
 
     }
 
@@ -45,13 +48,16 @@ public class MedicoAdapter extends RecyclerView.Adapter<MedicoAdapter.MedicoView
 
 
     public class MedicoViewHolder extends RecyclerView.ViewHolder {
-        TextView txtNombreAlarma,txtHoraAlarma;
+        TextView txtNombre, txtdomicilio, txttelefono, txtfecha, txtHora;
         ImageView foto;
 
         public MedicoViewHolder(View itemView) {
             super(itemView);
-            txtNombreAlarma= (TextView) itemView.findViewById(R.id.idNombreAlarma);
-            txtHoraAlarma= (TextView) itemView.findViewById(R.id.idHoraAlarma);
+            txtNombre= (TextView) itemView.findViewById(R.id.idNombre);
+            txtdomicilio= (TextView) itemView.findViewById(R.id.idDomicilio);
+            txttelefono= (TextView) itemView.findViewById(R.id.idTelefono);
+            txtfecha= (TextView) itemView.findViewById(R.id.idFecha);
+            txtHora= (TextView) itemView.findViewById(R.id.idHora);
         }
     }
 }

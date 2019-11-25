@@ -1,7 +1,6 @@
 package com.example.medicapp.Activity;
 
 import android.app.DatePickerDialog;
-import android.app.TimePickerDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -10,15 +9,15 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
-import android.widget.TimePicker;
 import android.widget.Toast;
 
+import com.example.medicapp.BDSQLite.ConexionSQLiteHelper;
 import com.example.medicapp.R;
 
 import java.util.Calendar;
 
 public class AgregarMedicamento extends AppCompatActivity implements View.OnClickListener, AdapterView.OnItemSelectedListener {
-    Button btnFechaInicio, btnFechaFinal;
+    Button btnFechaInicio, btnFechaFinal, btnGuardar;
     EditText txtFechaInicio, txtFechaFinal;
     int dia, mes, año;
 
@@ -30,11 +29,15 @@ public class AgregarMedicamento extends AppCompatActivity implements View.OnClic
         getSupportActionBar().setTitle("Agregar Medicamento");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        ConexionSQLiteHelper conn = new ConexionSQLiteHelper(this,"bd_medicapp", null, 1);
+
+
         btnFechaInicio = (Button) findViewById(R.id.btnFechaInicio);
         btnFechaFinal = (Button) findViewById(R.id.btnFechaFinal);
+        btnGuardar = (Button) findViewById(R.id.btnGuardar);
         txtFechaInicio = (EditText) findViewById(R.id.txtFechaInicio);
         txtFechaFinal = (EditText) findViewById(R.id.txtFechaFinal);
-        Spinner spinnerFrec = findViewById(R.id.spinnerFrecuencia);
+        Spinner spinnerFrec = findViewById(R.id.spinnerFrecuenciaHrs);
 
 
         btnFechaInicio.setOnClickListener(this);
@@ -79,7 +82,16 @@ public class AgregarMedicamento extends AppCompatActivity implements View.OnClic
                     , dia, mes, año);
             datePickerDialog.show();
         }
+
+        if(v == btnGuardar){
+            registrarMedico();
+        }
     }
+
+    private void registrarMedico() {
+        ConexionSQLiteHelper conn = new ConexionSQLiteHelper(this,"bd_medicapp", null, 1);
+    }
+
 
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
