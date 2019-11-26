@@ -1,6 +1,8 @@
 package com.example.medicapp.fragment;
 
 import android.content.Context;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -11,7 +13,13 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.medicapp.Adapter.InicioAdapter;
+import com.example.medicapp.Adapter.MedicamentoAdapter;
+import com.example.medicapp.Adapter.MedicoAdapter;
+import com.example.medicapp.BDSQLite.ConexionSQLiteHelper;
+import com.example.medicapp.BDSQLite.Constantes;
 import com.example.medicapp.Class.InicioVo;
+import com.example.medicapp.Class.MedicamentoVo;
+import com.example.medicapp.Class.MedicoVo;
 import com.example.medicapp.R;
 
 import java.util.ArrayList;
@@ -38,6 +46,9 @@ public class InicioFragment extends Fragment {
 
     RecyclerView recyclerInicio;
     ArrayList<InicioVo> listaAlarma;
+    ArrayList<MedicoVo> listaMedico;
+    ArrayList<MedicamentoVo> listaMedicamento;
+    ConexionSQLiteHelper conn;
 
     public InicioFragment() {
         // Required empty public constructor
@@ -77,16 +88,75 @@ public class InicioFragment extends Fragment {
     View vista = inflater.inflate(R.layout.fragment_inicio, container, false);
 
     listaAlarma=new ArrayList<>();
-    recyclerInicio= (RecyclerView) vista.findViewById(R.id.recyclerInicio);
-        recyclerInicio.setLayoutManager(new LinearLayoutManager(getContext()));
+    listaMedico=new ArrayList<>();
+    listaMedicamento=new ArrayList<>();
 
-    llenarLista();
+    recyclerInicio= vista.findViewById(R.id.recyclerInicio);
+    recyclerInicio.setLayoutManager(new LinearLayoutManager(getContext()));
 
-    InicioAdapter adapter=new InicioAdapter(listaAlarma);
-        recyclerInicio.setAdapter(adapter);
+    llenarListaMedico();
+    llenarListaMedicamento();
+
+
+
+        MedicoAdapter adaptermedico=new MedicoAdapter(listaMedico);
+        MedicamentoAdapter adaptermedicamento=new MedicamentoAdapter(listaMedicamento);
+
+        recyclerInicio.setAdapter(adaptermedico);
+        recyclerInicio.setAdapter(adaptermedicamento);
+
+
 
         return vista;
 }
+
+    private void llenarListaMedico() {
+        conn = new ConexionSQLiteHelper(getContext(), "bd_usuarios2", null,1);
+
+        SQLiteDatabase db=conn.getReadableDatabase();
+
+        MedicoVo medico=null;
+        // listaUsuarios=new ArrayList<Usuario>();
+        //select * from usuarios
+        Cursor cursor=db.rawQuery("SELECT * FROM "+ Constantes.TABLA_MEDICO,null);
+
+        while (cursor.moveToNext()) {
+            medico = new MedicoVo();
+            medico.setNombre(cursor.getString(0));
+            medico.setDomicilio(cursor.getString(1));
+            medico.setTelefono(cursor.getString(2));
+            medico.setFecha(cursor.getString(3));
+            medico.setHora(cursor.getString(4));
+
+            listaMedico.add(medico);
+        }
+
+    }
+
+
+    private void llenarListaMedicamento() {
+        conn = new ConexionSQLiteHelper(getContext(), "bd_usuarios2", null,1);
+        SQLiteDatabase db=conn.getReadableDatabase();
+
+        MedicamentoVo medicamento=null;
+        // listaUsuarios=new ArrayList<Usuario>();
+        //select * from usuarios
+        Cursor cursor=db.rawQuery("SELECT * FROM "+ Constantes.TABLA_MEDICAMENTO,null);
+
+        while (cursor.moveToNext()) {
+            medicamento = new MedicamentoVo();
+            medicamento.setNombre(cursor.getString(0));
+            medicamento.setNombreAlt(cursor.getString(1));
+            medicamento.setFechaInicial(cursor.getString(2));
+            medicamento.setFechaFinal(cursor.getString(3));
+            medicamento.setFrecuencia(cursor.getString(4));
+
+            listaMedicamento.add(medicamento);
+        }
+
+    }
+
+
 
     private void llenarLista() {
         listaAlarma.add(new InicioVo("medico","7:00 AM"));

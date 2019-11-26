@@ -2,6 +2,8 @@ package com.example.medicapp.fragment;
 
 import android.content.Context;
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -15,6 +17,8 @@ import android.view.ViewGroup;
 
 import com.example.medicapp.Activity.AgregarMedico;
 import com.example.medicapp.Adapter.MedicoAdapter;
+import com.example.medicapp.BDSQLite.ConexionSQLiteHelper;
+import com.example.medicapp.BDSQLite.Constantes;
 import com.example.medicapp.Class.MedicoVo;
 import com.example.medicapp.MainActivity;
 import com.example.medicapp.R;
@@ -46,6 +50,7 @@ public class MedicoFragment extends Fragment {
     RecyclerView recyclerMedicos;
     ArrayList<MedicoVo> listaAlarma;
     FloatingActionButton fab_medico;
+    ConexionSQLiteHelper conn;
 
     public MedicoFragment() {
         // Required empty public constructor
@@ -103,11 +108,33 @@ public class MedicoFragment extends Fragment {
         MedicoAdapter adapter=new MedicoAdapter(listaAlarma);
         recyclerMedicos.setAdapter(adapter);
 
+
         return vista;
     }
 
     private void llenarLista() {
-        listaAlarma.add(new MedicoVo("Medicamento1","paracetamol", "10/10/10", "11/11/11", "8"));
+        /*listaAlarma.add(new MedicoVo("Medicamento1","paracetamol", "10/10/10", "11/11/11", "8"));*/
+
+        conn = new ConexionSQLiteHelper(getContext(), "bd_usuarios2", null,1);
+
+        SQLiteDatabase db=conn.getReadableDatabase();
+
+        MedicoVo medico=null;
+        // listaUsuarios=new ArrayList<Usuario>();
+        //select * from usuarios
+        Cursor cursor=db.rawQuery("SELECT * FROM "+ Constantes.TABLA_MEDICO,null);
+
+        while (cursor.moveToNext()) {
+            medico = new MedicoVo();
+            medico.setNombre(cursor.getString(0));
+            medico.setDomicilio(cursor.getString(1));
+            medico.setTelefono(cursor.getString(2));
+            medico.setFecha(cursor.getString(3));
+            medico.setHora(cursor.getString(4));
+
+            listaAlarma.add(medico);
+
+        }
 
 
 

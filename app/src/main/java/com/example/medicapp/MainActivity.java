@@ -13,6 +13,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 
+import com.example.medicapp.BDSQLite.ConexionSQLiteHelper;
 import com.example.medicapp.fragment.ConfiguracionFragment;
 import com.example.medicapp.fragment.InicioFragment;
 import com.example.medicapp.fragment.MedicamentoFragment;
@@ -29,6 +30,8 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        ConexionSQLiteHelper conn = new ConexionSQLiteHelper(this,"bd_medicapp", null, 1);
 
        /*FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {

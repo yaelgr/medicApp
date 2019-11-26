@@ -7,6 +7,15 @@ public class MedicoVo {
     private String fecha;
     private String hora;
 
+    public MedicoVo() {
+        this.nombre = nombre;
+        this.domicilio = domicilio;
+        this.telefono = telefono;
+        this.fecha = fecha;
+        this.hora = hora;
+
+    }
+
 
     public String getNombre() {
         return nombre;
@@ -48,14 +57,7 @@ public class MedicoVo {
         this.hora = hora;
     }
 
-    public MedicoVo(String nombre, String domicilio, String telefono, String fecha, String hora ) {
-        this.nombre = nombre;
-        this.domicilio = domicilio;
-        this.telefono = telefono;
-        this.fecha = fecha;
-        this.hora = hora;
 
-    }
 
 
 }

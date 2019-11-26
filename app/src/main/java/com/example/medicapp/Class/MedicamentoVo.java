@@ -9,7 +9,7 @@ public class MedicamentoVo {
     private String frecuencia;
 
 
-    public MedicamentoVo(String nombre, String nombreAlt, String fechaInicial, String fechaFinal, String frecuencia) {
+    public MedicamentoVo() {
         this.nombre = nombre;
         this.nombreAlt = nombreAlt;
         this.fechaInicial = fechaInicial;

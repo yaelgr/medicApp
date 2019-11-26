@@ -51,11 +51,11 @@ public class MedicamentoAdapter extends RecyclerView.Adapter<MedicamentoAdapter.
         ImageView foto;
         public MedicamentoViewHolder(View itemView) {
             super(itemView);
-            txtNombre= (TextView) itemView.findViewById(R.id.idNombre);
-           txtNombreAlt= (TextView) itemView.findViewById(R.id.idnombreAlt);
-            txtFechaInicial= (TextView) itemView.findViewById(R.id.idFechaInicial);
-            txtFechaFinal= (TextView) itemView.findViewById(R.id.idFechaFinal);
-            txtFrecuencia= (TextView) itemView.findViewById(R.id.idFrecuencia);
+            txtNombre= itemView.findViewById(R.id.idNombre);
+           txtNombreAlt= itemView.findViewById(R.id.idnombreAlt);
+            txtFechaInicial= itemView.findViewById(R.id.idFechaInicial);
+            txtFechaFinal= itemView.findViewById(R.id.idFechaFinal);
+            txtFrecuencia= itemView.findViewById(R.id.idFrecuencia);
         }
     }
 }

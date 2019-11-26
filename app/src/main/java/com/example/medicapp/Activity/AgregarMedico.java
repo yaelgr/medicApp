@@ -2,6 +2,8 @@ package com.example.medicapp.Activity;
 
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
+import android.content.ContentValues;
+import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -9,15 +11,18 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TimePicker;
+import android.widget.Toast;
 
+import com.example.medicapp.BDSQLite.ConexionSQLiteHelper;
+import com.example.medicapp.BDSQLite.Constantes;
 import com.example.medicapp.R;
 
 import java.util.Calendar;
 
 public class AgregarMedico extends AppCompatActivity implements View.OnClickListener {
 
-    Button btnFecha, btnHora;
-    EditText txtFecha, txtHora;
+    Button btnFecha, btnHora, btnGuardar;
+    EditText txtFecha, txtHora, txtNombreMedico, txtDomicilio, txtTel;
     int dia,mes,año,hora,minutos;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,13 +33,19 @@ public class AgregarMedico extends AppCompatActivity implements View.OnClickList
         getSupportActionBar().setTitle("Agregar médico");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        btnFecha = (Button) findViewById(R.id.btnFecha);
-        btnHora = (Button) findViewById(R.id.btnHora);
-        txtFecha = (EditText) findViewById(R.id.txtFecha);
-        txtHora = (EditText) findViewById(R.id.txtHora);
+        btnFecha = findViewById(R.id.btnFecha);
+        btnHora = findViewById(R.id.btnHora);
+        btnGuardar = findViewById(R.id.btnGuardarMedicamento);
+        txtFecha = findViewById(R.id.txtFecha);
+        txtHora = findViewById(R.id.txtHora);
+        txtNombreMedico = findViewById(R.id.txtMedico);
+        txtDomicilio = findViewById(R.id.txtDomicilio);
+        txtTel = findViewById(R.id.txtTel);
 
         btnFecha.setOnClickListener(this);
         btnHora.setOnClickListener(this);
+        btnGuardar.setOnClickListener(this);
+
 
     }
 
@@ -71,5 +82,53 @@ public class AgregarMedico extends AppCompatActivity implements View.OnClickList
             timerPickerDialog.show();
         }
 
+        if (v==btnGuardar){
+            agregarMedicoSQL();
+        }
+    }
+
+    private void agregarMedicoSQL() {
+
+        ConexionSQLiteHelper conn=new ConexionSQLiteHelper(this,"bd_usuarios2",null,1);
+
+        SQLiteDatabase db=conn.getWritableDatabase();
+
+        String insert="INSERT INTO "+Constantes.TABLA_MEDICO+" ("+Constantes.NOMBRE_MEDICO+","+Constantes.DOMICILIO_MEDICO+","+Constantes.TELEFONO_MEDICO+","+Constantes.FECHA_CITA+","+Constantes.HORA_CITA+") " +
+                "VALUES ('"+txtNombreMedico.getText().toString()+"','"+txtDomicilio.getText().toString()+"','"+txtTel.getText().toString()+"','"+txtFecha.getText().toString()+"', '"+txtHora.getText().toString()+"')";
+
+        db.execSQL(insert);
+
+        Toast.makeText(getApplicationContext(),"Cita médica agregada correctamente",Toast.LENGTH_SHORT).show();
+
+        db.close();
+
+        txtNombreMedico.getText().clear();
+        txtDomicilio.getText().clear();
+        txtTel.getText().clear();
+        txtFecha.getText().clear();
+        txtHora.getText().clear();
+
+    }
+
+    private void agregarMedico() {
+
+       ConexionSQLiteHelper conn = new ConexionSQLiteHelper(this,"bd_medicapp", null, 1);
+
+       SQLiteDatabase db=conn.getWritableDatabase();
+
+       ContentValues values=new ContentValues();
+       values.put(Constantes.NOMBRE_MEDICO, txtNombreMedico.getText().toString());
+       values.put(Constantes.DOMICILIO_MEDICO, txtDomicilio.getText().toString());
+       values.put(Constantes.TELEFONO_MEDICO, txtTel.getText().toString());
+       values.put(Constantes.FECHA_CITA, txtFecha.getText().toString());
+       values.put(Constantes.HORA_CITA, txtHora.getText().toString());
+
+
+       Long idResultante = db.insert(Constantes.TABLA_MEDICO, Constantes.NOMBRE_MEDICO,values);
+
+       Toast.makeText(getApplicationContext(), "nombre medico: " +idResultante,Toast.LENGTH_SHORT).show();
+       db.close();
+
+       Toast.makeText(getApplicationContext(),"xd",Toast.LENGTH_SHORT).show();
     }
 }

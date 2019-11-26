@@ -1,6 +1,8 @@
 package com.example.medicapp.Activity;
 
 import android.app.DatePickerDialog;
+import android.content.ContentValues;
+import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -8,17 +10,21 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.SearchView;
 import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.example.medicapp.BDSQLite.ConexionSQLiteHelper;
+import com.example.medicapp.BDSQLite.Constantes;
 import com.example.medicapp.R;
 
 import java.util.Calendar;
 
 public class AgregarMedicamento extends AppCompatActivity implements View.OnClickListener, AdapterView.OnItemSelectedListener {
     Button btnFechaInicio, btnFechaFinal, btnGuardar;
-    EditText txtFechaInicio, txtFechaFinal;
+    EditText txtFechaInicial, txtFechaFinal, txtNombreAlt;
+    SearchView searchViewMedicamento;
+    Spinner spinnerFrecuenciaHrs;
     int dia, mes, año;
 
     @Override
@@ -29,20 +35,21 @@ public class AgregarMedicamento extends AppCompatActivity implements View.OnClic
         getSupportActionBar().setTitle("Agregar Medicamento");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        ConexionSQLiteHelper conn = new ConexionSQLiteHelper(this,"bd_medicapp", null, 1);
 
-
-        btnFechaInicio = (Button) findViewById(R.id.btnFechaInicio);
-        btnFechaFinal = (Button) findViewById(R.id.btnFechaFinal);
-        btnGuardar = (Button) findViewById(R.id.btnGuardar);
-        txtFechaInicio = (EditText) findViewById(R.id.txtFechaInicio);
-        txtFechaFinal = (EditText) findViewById(R.id.txtFechaFinal);
-        Spinner spinnerFrec = findViewById(R.id.spinnerFrecuenciaHrs);
+        btnFechaInicio = findViewById(R.id.btnFechaInicio);
+        btnFechaFinal = findViewById(R.id.btnFechaFinal);
+        btnGuardar = findViewById(R.id.btnGuardar);
+        txtFechaInicial = findViewById(R.id.txtFechaInicio);
+        txtFechaFinal =  findViewById(R.id.txtFechaFinal);
+        txtNombreAlt = findViewById(R.id.txtNombreAlt);
+        searchViewMedicamento = findViewById(R.id.searchViewMedicamento);
+        spinnerFrecuenciaHrs = findViewById(R.id.spinnerFrecuenciaHrs);
 
 
         btnFechaInicio.setOnClickListener(this);
         btnFechaFinal.setOnClickListener(this);
-        spinnerFrec.setOnItemSelectedListener(this);
+        btnGuardar.setOnClickListener(this);
+        spinnerFrecuenciaHrs.setOnItemSelectedListener(this);
 
 
     }
@@ -59,7 +66,7 @@ public class AgregarMedicamento extends AppCompatActivity implements View.OnClic
             DatePickerDialog datePickerDialog = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
                 @Override
                 public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
-                    txtFechaInicio.setText(dayOfMonth + "/" + (monthOfYear + 1) + "/" + year);
+                    txtFechaInicial.setText(dayOfMonth + "/" + (monthOfYear + 1) + "/" + year);
                 }
             }
                     , dia, mes, año);
@@ -84,12 +91,33 @@ public class AgregarMedicamento extends AppCompatActivity implements View.OnClic
         }
 
         if(v == btnGuardar){
-            registrarMedico();
+            agregarMedicamentoSQL();
         }
     }
 
-    private void registrarMedico() {
-        ConexionSQLiteHelper conn = new ConexionSQLiteHelper(this,"bd_medicapp", null, 1);
+    private void agregarMedicamentoSQL() {
+
+        ConexionSQLiteHelper conn=new ConexionSQLiteHelper(this,"bd_usuarios2",null,1);
+
+        SQLiteDatabase db=conn.getWritableDatabase();
+
+        String insert="INSERT INTO "+Constantes.TABLA_MEDICAMENTO+" ("+Constantes.NOMBRE_MEDICAMENTO+","+Constantes.NOMBRE_ALTER+","+Constantes.FECHA_INICIAL+","+Constantes.FECHA_FINAL+","+Constantes.FRECUENCIA+") " +
+                "VALUES ('"+searchViewMedicamento.getQuery().toString()+"','"+txtNombreAlt.getText().toString()+"','"+txtFechaInicial.getText().toString()+"','"+txtFechaFinal.getText().toString()+"', '"+spinnerFrecuenciaHrs.getSelectedItem().toString()+"')";
+
+        db.execSQL(insert);
+
+
+        Toast.makeText(getApplicationContext(),"Medicamento agregado correctamente",Toast.LENGTH_SHORT).show();
+        db.close();
+
+        searchViewMedicamento.setQuery("", false);
+        txtNombreAlt.getText().clear();
+        txtFechaInicial.getText().clear();
+        txtFechaFinal.getText().clear();
+        spinnerFrecuenciaHrs.setAdapter(null);
+
+
+
     }
 
 

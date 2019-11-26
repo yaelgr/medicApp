@@ -2,6 +2,8 @@ package com.example.medicapp.fragment;
 
 import android.content.Context;
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -14,6 +16,8 @@ import android.view.ViewGroup;
 
 import com.example.medicapp.Activity.AgregarMedicamento;
 import com.example.medicapp.Adapter.MedicamentoAdapter;
+import com.example.medicapp.BDSQLite.ConexionSQLiteHelper;
+import com.example.medicapp.BDSQLite.Constantes;
 import com.example.medicapp.Class.MedicamentoVo;
 import com.example.medicapp.R;
 
@@ -43,6 +47,7 @@ public class MedicamentoFragment extends Fragment {
     RecyclerView recyclerMedicamentos;
     ArrayList<MedicamentoVo> listaAlarma;
     FloatingActionButton fab_medicamento;
+    ConexionSQLiteHelper conn;
 
     public MedicamentoFragment() {
         // Required empty public constructor
@@ -105,8 +110,24 @@ public class MedicamentoFragment extends Fragment {
     }
 
     private void llenarLista() {
-        listaAlarma.add(new MedicamentoVo("Medicamento1","paracetamol", "10/10/10", "11/11/11", "8"));
-        listaAlarma.add(new MedicamentoVo("Medicamento2","jarabe tos", "11/11/11", "12/12/12", "10"));
+        conn = new ConexionSQLiteHelper(getContext(), "bd_usuarios2", null,1);
+        SQLiteDatabase db=conn.getReadableDatabase();
+
+        MedicamentoVo medicamento=null;
+        // listaUsuarios=new ArrayList<Usuario>();
+        //select * from usuarios
+        Cursor cursor=db.rawQuery("SELECT * FROM "+ Constantes.TABLA_MEDICAMENTO,null);
+
+        while (cursor.moveToNext()) {
+            medicamento = new MedicamentoVo();
+            medicamento.setNombre(cursor.getString(0));
+            medicamento.setNombreAlt(cursor.getString(1));
+            medicamento.setFechaInicial(cursor.getString(2));
+            medicamento.setFechaFinal(cursor.getString(3));
+            medicamento.setFrecuencia(cursor.getString(4));
+
+            listaAlarma.add(medicamento);
+        }
 
 
     }

@@ -53,11 +53,11 @@ public class MedicoAdapter extends RecyclerView.Adapter<MedicoAdapter.MedicoView
 
         public MedicoViewHolder(View itemView) {
             super(itemView);
-            txtNombre= (TextView) itemView.findViewById(R.id.idNombre);
-            txtdomicilio= (TextView) itemView.findViewById(R.id.idDomicilio);
-            txttelefono= (TextView) itemView.findViewById(R.id.idTelefono);
-            txtfecha= (TextView) itemView.findViewById(R.id.idFecha);
-            txtHora= (TextView) itemView.findViewById(R.id.idHora);
+            txtNombre= itemView.findViewById(R.id.idNombre);
+            txtdomicilio= itemView.findViewById(R.id.idDomicilio);
+            txttelefono= itemView.findViewById(R.id.idTelefono);
+            txtfecha= itemView.findViewById(R.id.idFecha);
+            txtHora= itemView.findViewById(R.id.idHora);
         }
     }
 }
