@@ -27,6 +27,7 @@
     <!--  Mediccamento fragment -->
     <string name="btnfechainicio">Desde</string>
     <string name="btnfechafinal">Hasta</string>
+    <string name="btnHoraInicio">Hora inicial</string>
     <string name="tvfrec">Frecuencia</string>
     <string name="tvnomAlt">Nombre alterntivo</string>
 

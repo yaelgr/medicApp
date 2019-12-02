@@ -105,7 +105,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:text="Cambio de tono, configuración de frecuencia..."
+                    android:text="Ver historial, borrar historial..."
                     android:textSize="15sp"
                     android:textStyle="italic" />
 
@@ -117,57 +117,6 @@
     </android.support.v7.widget.CardView>
 
 
-    <android.support.v7.widget.CardView
-        android:id="@+id/cardViewGoogle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        app:cardBackgroundColor="#D7B1F5"
-        app:layout_constraintTop_toBottomOf="@+id/cardViewHistorial"
-        tools:layout_editor_absoluteX="0dp">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:id="@+id/idImgGoogle"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_marginTop="1dp"
-                android:layout_marginRight="10dp"
-                android:src="@drawable/ic_config_google" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/idTituloGoogle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:text="@string/tituloGoogle"
-                    android:textSize="23sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/idDescGoogle"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:text="Información acerca de google assitant y sus especificaciones"
-                    android:textSize="15sp"
-                    android:textStyle="italic" />
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-
-    </android.support.v7.widget.CardView>
 
 
     <android.support.v7.widget.CardView
@@ -176,7 +125,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         app:cardBackgroundColor="#D7B1F5"
-        app:layout_constraintTop_toBottomOf="@+id/cardViewGoogle"
+        app:layout_constraintTop_toBottomOf="@+id/cardViewHistorial"
         tools:layout_editor_absoluteX="0dp">
 
         <LinearLayout
