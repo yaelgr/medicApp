@@ -91,7 +91,6 @@ public class ConfiguracionFragment extends Fragment {
 
         cardViewAjustes = vista.findViewById(R.id.cardViewAjustes);
         cardViewHistorial = vista.findViewById(R.id.cardViewHistorial);
-        cardViewGoogle = vista.findViewById(R.id.cardViewGoogle);
         cardViewAcerca = vista.findViewById(R.id.cardViewAcerca);
 
         cardViewAjustes.setOnClickListener(new View.OnClickListener() {
@@ -129,22 +128,6 @@ public class ConfiguracionFragment extends Fragment {
             }
         });
 
-        cardViewGoogle.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                DialogFrag_Google dialog = new DialogFrag_Google();
-                dialog.show(getFragmentManager(), "DialogFragGoogle");
-
-                       /* MedicamentoFragment nuevoFragmento = new MedicamentoFragment();
-                        FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                        transaction.replace(R.id.content_main, nuevoFragmento);
-                        transaction.addToBackStack(null);
-
-                        // Commit a la transacción
-                        transaction.commit();*/
-            }
-        });
         cardViewAcerca.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -1,6 +1,7 @@
 package com.example.medicapp.Activity;
 
 import android.app.DatePickerDialog;
+import android.app.TimePickerDialog;
 import android.content.ContentValues;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
@@ -12,6 +13,7 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.SearchView;
 import android.widget.Spinner;
+import android.widget.TimePicker;
 import android.widget.Toast;
 
 import com.example.medicapp.BDSQLite.ConexionSQLiteHelper;
@@ -21,11 +23,11 @@ import com.example.medicapp.R;
 import java.util.Calendar;
 
 public class AgregarMedicamento extends AppCompatActivity implements View.OnClickListener, AdapterView.OnItemSelectedListener {
-    Button btnFechaInicio, btnFechaFinal, btnGuardar;
-    EditText txtFechaInicial, txtFechaFinal, txtNombreAlt;
+    Button btnFechaInicio, btnFechaFinal, btnGuardar, btnHoraInicio;
+    EditText txtFechaInicial, txtFechaFinal, txtNombreAlt, txtHoraInicio;
     SearchView searchViewMedicamento;
     Spinner spinnerFrecuenciaHrs;
-    int dia, mes, año;
+    int dia, mes, año,hora,minutos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,17 +39,21 @@ public class AgregarMedicamento extends AppCompatActivity implements View.OnClic
 
 
         btnFechaInicio = findViewById(R.id.btnFechaInicio);
-        btnFechaFinal = findViewById(R.id.btnFechaFinal);
+        btnFechaFinal  = findViewById(R.id.btnFechaFinal);
+        btnHoraInicio  = findViewById(R.id.btnHoraInicio);
         btnGuardar = findViewById(R.id.btnGuardar);
+        txtNombreAlt = findViewById(R.id.txtNombreAlt);
         txtFechaInicial = findViewById(R.id.txtFechaInicio);
         txtFechaFinal =  findViewById(R.id.txtFechaFinal);
-        txtNombreAlt = findViewById(R.id.txtNombreAlt);
+        txtHoraInicio =  findViewById(R.id.txtHoraInicio);
+
         searchViewMedicamento = findViewById(R.id.searchViewMedicamento);
         spinnerFrecuenciaHrs = findViewById(R.id.spinnerFrecuenciaHrs);
 
 
         btnFechaInicio.setOnClickListener(this);
         btnFechaFinal.setOnClickListener(this);
+        btnHoraInicio.setOnClickListener(this);
         btnGuardar.setOnClickListener(this);
         spinnerFrecuenciaHrs.setOnItemSelectedListener(this);
 
@@ -74,6 +80,7 @@ public class AgregarMedicamento extends AppCompatActivity implements View.OnClic
         }
 
 
+
         if (v == btnFechaFinal) {
             final Calendar c = Calendar.getInstance();
             dia = c.get(Calendar.DAY_OF_MONTH);
@@ -90,6 +97,20 @@ public class AgregarMedicamento extends AppCompatActivity implements View.OnClic
             datePickerDialog.show();
         }
 
+        if (v == btnHoraInicio) {
+            final Calendar c= Calendar.getInstance();
+            hora = c.get(Calendar.HOUR_OF_DAY);
+            minutos = c.get(Calendar.MINUTE);
+
+            TimePickerDialog timerPickerDialog = new TimePickerDialog(this, new TimePickerDialog.OnTimeSetListener() {
+                @Override
+                public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
+                    txtHoraInicio.setText(hourOfDay+":"+minute);
+                }
+            },hora,minutos,false);
+            timerPickerDialog.show();
+        }
+
         if(v == btnGuardar){
             agregarMedicamentoSQL();
         }
@@ -101,9 +122,8 @@ public class AgregarMedicamento extends AppCompatActivity implements View.OnClic
 
         SQLiteDatabase db=conn.getWritableDatabase();
 
-        String insert="INSERT INTO "+Constantes.TABLA_MEDICAMENTO+" ("+Constantes.NOMBRE_MEDICAMENTO+","+Constantes.NOMBRE_ALTER+","+Constantes.FECHA_INICIAL+","+Constantes.FECHA_FINAL+","+Constantes.FRECUENCIA+") " +
-                "VALUES ('"+searchViewMedicamento.getQuery().toString()+"','"+txtNombreAlt.getText().toString()+"','"+txtFechaInicial.getText().toString()+"','"+txtFechaFinal.getText().toString()+"', '"+spinnerFrecuenciaHrs.getSelectedItem().toString()+"')";
-
+        String insert="INSERT INTO "+Constantes.TABLA_MEDICAMENTO+" ("+Constantes.NOMBRE_MEDICAMENTO+","+Constantes.NOMBRE_ALTER+","+Constantes.FECHA_INICIAL+","+Constantes.FECHA_FINAL+", "+Constantes.HORA_INICIO+","+Constantes.FRECUENCIA+") " +
+                "VALUES ('"+searchViewMedicamento.getQuery().toString()+"','"+txtNombreAlt.getText().toString()+"','"+txtFechaInicial.getText().toString()+"','"+txtFechaFinal.getText().toString()+"','"+txtHoraInicio.getText().toString()+"', '"+spinnerFrecuenciaHrs.getSelectedItem().toString()+"')";
         db.execSQL(insert);
 
 
@@ -114,6 +134,7 @@ public class AgregarMedicamento extends AppCompatActivity implements View.OnClic
         txtNombreAlt.getText().clear();
         txtFechaInicial.getText().clear();
         txtFechaFinal.getText().clear();
+        txtHoraInicio.getText().clear();
         spinnerFrecuenciaHrs.setAdapter(null);
 
 

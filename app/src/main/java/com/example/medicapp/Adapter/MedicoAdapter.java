@@ -5,6 +5,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -50,14 +51,15 @@ public class MedicoAdapter extends RecyclerView.Adapter<MedicoAdapter.MedicoView
     public class MedicoViewHolder extends RecyclerView.ViewHolder {
         TextView txtNombre, txtdomicilio, txttelefono, txtfecha, txtHora;
         ImageView foto;
+        Button btnEliminar;
 
         public MedicoViewHolder(View itemView) {
             super(itemView);
-            txtNombre= itemView.findViewById(R.id.idNombre);
+            txtNombre= itemView.findViewById(R.id.idNombreMedico);
             txtdomicilio= itemView.findViewById(R.id.idDomicilio);
             txttelefono= itemView.findViewById(R.id.idTelefono);
-            txtfecha= itemView.findViewById(R.id.idFecha);
-            txtHora= itemView.findViewById(R.id.idHora);
+            txtfecha= itemView.findViewById(R.id.idfechaCita);
+            txtHora= itemView.findViewById(R.id.idhoraCita);
         }
     }
 }

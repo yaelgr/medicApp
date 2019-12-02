@@ -38,6 +38,7 @@ public class MedicamentoAdapter extends RecyclerView.Adapter<MedicamentoAdapter.
         holder.txtNombreAlt.setText(listaAlarma.get(position).getNombreAlt());
         holder.txtFechaInicial.setText(listaAlarma.get(position).getFechaInicial());
         holder.txtFechaFinal.setText(listaAlarma.get(position).getFechaFinal());
+        holder.txtHoraInicio.setText(listaAlarma.get(position).getHoraInicio());
         holder.txtFrecuencia.setText(listaAlarma.get(position).getFrecuencia());
     }
 
@@ -47,14 +48,15 @@ public class MedicamentoAdapter extends RecyclerView.Adapter<MedicamentoAdapter.
     }
 
     public class MedicamentoViewHolder extends RecyclerView.ViewHolder {
-        TextView txtNombre,txtNombreAlt, txtFechaInicial, txtFechaFinal, txtFrecuencia;
-        ImageView foto;
+        TextView txtNombre,txtNombreAlt, txtFechaInicial, txtFechaFinal, txtFrecuencia, txtHoraInicio;
+
         public MedicamentoViewHolder(View itemView) {
             super(itemView);
-            txtNombre= itemView.findViewById(R.id.idNombre);
-           txtNombreAlt= itemView.findViewById(R.id.idnombreAlt);
+            txtNombre= itemView.findViewById(R.id.idNombreMedicamento);
+           txtNombreAlt= itemView.findViewById(R.id.idNombreAlter);
             txtFechaInicial= itemView.findViewById(R.id.idFechaInicial);
             txtFechaFinal= itemView.findViewById(R.id.idFechaFinal);
+            txtHoraInicio= itemView.findViewById(R.id.idHorainicial);
             txtFrecuencia= itemView.findViewById(R.id.idFrecuencia);
         }
     }

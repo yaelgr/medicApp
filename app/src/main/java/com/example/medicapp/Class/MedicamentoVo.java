@@ -6,16 +6,9 @@ public class MedicamentoVo {
     private String nombreAlt;
     private String fechaInicial;
     private String fechaFinal;
+    private String horaInicio;
     private String frecuencia;
 
-
-    public MedicamentoVo() {
-        this.nombre = nombre;
-        this.nombreAlt = nombreAlt;
-        this.fechaInicial = fechaInicial;
-        this.fechaFinal = fechaInicial;
-        this.frecuencia = frecuencia;
-    }
 
     public String getNombre() {
         return nombre;
@@ -33,7 +26,6 @@ public class MedicamentoVo {
         this.nombreAlt = nombreAlt;
     }
 
-
     public String getFechaInicial() {
         return fechaInicial;
     }
@@ -50,6 +42,14 @@ public class MedicamentoVo {
         this.fechaFinal = fechaFinal;
     }
 
+    public String getHoraInicio() {
+        return horaInicio;
+    }
+
+    public void setHoraInicio(String horaInicio) {
+        this.horaInicio = horaInicio;
+    }
+
     public String getFrecuencia() {
         return frecuencia;
     }
@@ -57,5 +57,16 @@ public class MedicamentoVo {
     public void setFrecuencia(String frecuencia) {
         this.frecuencia = frecuencia;
     }
+
+    public MedicamentoVo() {
+        this.nombre = nombre;
+        this.nombreAlt = nombreAlt;
+        this.fechaInicial = fechaInicial;
+        this.fechaFinal = fechaInicial;
+        this.horaInicio = horaInicio;
+        this.frecuencia = frecuencia;
+
+    }
+
 
 }

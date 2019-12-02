@@ -124,7 +124,8 @@ public class MedicamentoFragment extends Fragment {
             medicamento.setNombreAlt(cursor.getString(1));
             medicamento.setFechaInicial(cursor.getString(2));
             medicamento.setFechaFinal(cursor.getString(3));
-            medicamento.setFrecuencia(cursor.getString(4));
+            medicamento.setHoraInicio(cursor.getString(4) + " horas");
+            medicamento.setFrecuencia(cursor.getString(5) + " horas");
 
             listaAlarma.add(medicamento);
         }
