@@ -24,22 +24,28 @@
     <string name="btnfecha">Fecha</string>
     <string name="btnhora">Hora</string>
 
-    <!--  Mediccamento fragment -->
+    <!--  Medicamento fragment -->
     <string name="btnfechainicio">Desde</string>
     <string name="btnfechafinal">Hasta</string>
-    <string name="btnHoraInicio">Hora inicial</string>
-    <string name="tvfrec">Frecuencia</string>
-    <string name="tvnomAlt">Nombre alterntivo</string>
+    <string name="btnHoraInicio">Hora </string>
+    <string name="tvfrec">Repetir cada</string>
+    <string name="nomAlt">Nombre alternativo</string>
+    <string name="fechaInicio">Fecha inicial</string>
+    <string name="fechaFinal">Fecha final</string>
+    <string name="horaInicio">Hora de inicio de alarma</string>
+    <string name="busqueda">Escriba el nombre del medicamento</string>
+
+
+
 
     <string-array name="FrecuenciaMin">
-        <item>0</item>
+        <item>1</item>
         <item>5</item>
         <item>15</item>
         <item>30</item>
         <item>45</item>
     </string-array>
     <string-array name="FrecuenciaHrs">
-        <item>0</item>
         <item>1</item>
         <item>2</item>
         <item>3</item>
