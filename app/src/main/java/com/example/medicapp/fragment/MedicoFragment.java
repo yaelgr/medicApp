@@ -115,7 +115,7 @@ public class MedicoFragment extends Fragment {
     private void llenarLista() {
         /*listaAlarma.add(new MedicoVo("Medicamento1","paracetamol", "10/10/10", "11/11/11", "8"));*/
 
-        conn = new ConexionSQLiteHelper(getContext(), "bd_usuarios2", null,1);
+        conn = new ConexionSQLiteHelper(getContext(), "bd_medicapp", null,1);
 
         SQLiteDatabase db=conn.getReadableDatabase();
 
@@ -126,11 +126,11 @@ public class MedicoFragment extends Fragment {
 
         while (cursor.moveToNext()) {
             medico = new MedicoVo();
-            medico.setNombre(cursor.getString(0));
-            medico.setDomicilio(cursor.getString(1));
-            medico.setTelefono(cursor.getString(2));
-            medico.setFecha(cursor.getString(3));
-            medico.setHora(cursor.getString(4));
+            medico.setNombre(cursor.getString(1));
+            medico.setDomicilio(cursor.getString(2));
+            medico.setTelefono(cursor.getString(3));
+            medico.setFecha(cursor.getString(4));
+            medico.setHora(cursor.getString(5));
 
             listaAlarma.add(medico);
 

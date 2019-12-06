@@ -3,11 +3,14 @@ package com.example.medicapp.Activity;
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
 import android.content.ContentValues;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
@@ -20,12 +23,14 @@ import com.example.medicapp.BDSQLite.ConexionSQLiteHelper;
 import com.example.medicapp.BDSQLite.Constantes;
 import com.example.medicapp.R;
 
+import java.util.ArrayList;
 import java.util.Calendar;
 
 public class AgregarMedicamento extends AppCompatActivity implements View.OnClickListener, AdapterView.OnItemSelectedListener {
     Button btnFechaInicio, btnFechaFinal, btnGuardar, btnHoraInicio;
     EditText txtFechaInicial, txtFechaFinal, txtNombreAlt, txtHoraInicio;
     SearchView searchViewMedicamento;
+    private AutoCompleteTextView autoComplete;
     Spinner spinnerFrecuenciaHrs;
     int dia, mes, año,hora,minutos;
 
@@ -46,9 +51,12 @@ public class AgregarMedicamento extends AppCompatActivity implements View.OnClic
         txtFechaInicial = findViewById(R.id.txtFechaInicio);
         txtFechaFinal =  findViewById(R.id.txtFechaFinal);
         txtHoraInicio =  findViewById(R.id.txtHoraInicio);
+        autoComplete = findViewById(R.id.AutoComplete);
 
-        searchViewMedicamento = findViewById(R.id.searchViewMedicamento);
+
         spinnerFrecuenciaHrs = findViewById(R.id.spinnerFrecuenciaHrs);
+
+
 
 
         btnFechaInicio.setOnClickListener(this);
@@ -56,6 +64,31 @@ public class AgregarMedicamento extends AppCompatActivity implements View.OnClic
         btnHoraInicio.setOnClickListener(this);
         btnGuardar.setOnClickListener(this);
         spinnerFrecuenciaHrs.setOnItemSelectedListener(this);
+
+
+        ConexionSQLiteHelper conn=new ConexionSQLiteHelper(this,"bd_medicapp",null,1);
+        SQLiteDatabase db=conn.getWritableDatabase();
+
+        final String [] mydata;
+        ArrayList<String> array = new ArrayList<>();
+        //Inside the method you've read the cursor, loop through it and add those item to array
+        String sql="SELECT * FROM "+Constantes.TABLA_REGISTRO_MEDICAMENTO+"";
+        //execute SQL
+        Cursor cr = db.rawQuery(sql, null);
+        cr.moveToFirst();//cursor pointing to first row
+        mydata = new String[cr.getCount()];//create array string based on numbers of row
+        int i=0;
+        do  {
+            mydata[i] = cr.getString(1);//insert new stations to the array list
+            //Log.i("ArrayList",mydata[i]);
+            i++;
+        }while(cr.moveToNext());
+        //Finally Set the adapter to AutoCompleteTextView like this,
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
+                android.R.layout.simple_dropdown_item_1line, mydata);
+        //populate the list to the AutoCompleteTextView controls
+        autoComplete.setAdapter(adapter);
+
 
 
     }
@@ -116,26 +149,29 @@ public class AgregarMedicamento extends AppCompatActivity implements View.OnClic
         }
     }
 
+
+
     private void agregarMedicamentoSQL() {
 
-        ConexionSQLiteHelper conn=new ConexionSQLiteHelper(this,"bd_usuarios2",null,1);
+        ConexionSQLiteHelper conn=new ConexionSQLiteHelper(this,"bd_medicapp",null,1);
 
         SQLiteDatabase db=conn.getWritableDatabase();
 
         String insert="INSERT INTO "+Constantes.TABLA_MEDICAMENTO+" ("+Constantes.NOMBRE_MEDICAMENTO+","+Constantes.NOMBRE_ALTER+","+Constantes.FECHA_INICIAL+","+Constantes.FECHA_FINAL+", "+Constantes.HORA_INICIO+","+Constantes.FRECUENCIA+") " +
-                "VALUES ('"+searchViewMedicamento.getQuery().toString()+"','"+txtNombreAlt.getText().toString()+"','"+txtFechaInicial.getText().toString()+"','"+txtFechaFinal.getText().toString()+"','"+txtHoraInicio.getText().toString()+"', '"+spinnerFrecuenciaHrs.getSelectedItem().toString()+"')";
+                "VALUES ('"+autoComplete.getText().toString()+"','"+txtNombreAlt.getText().toString()+"','"+txtFechaInicial.getText().toString()+"','"+txtFechaFinal.getText().toString()+"','"+txtHoraInicio.getText().toString()+"', '"+spinnerFrecuenciaHrs.getSelectedItem().toString()+"')";
         db.execSQL(insert);
 
 
         Toast.makeText(getApplicationContext(),"Medicamento agregado correctamente",Toast.LENGTH_SHORT).show();
         db.close();
 
-        searchViewMedicamento.setQuery("", false);
+
+        autoComplete.getText().clear();
         txtNombreAlt.getText().clear();
         txtFechaInicial.getText().clear();
         txtFechaFinal.getText().clear();
         txtHoraInicio.getText().clear();
-        spinnerFrecuenciaHrs.setAdapter(null);
+        spinnerFrecuenciaHrs.setSelection(0);
 
 
 

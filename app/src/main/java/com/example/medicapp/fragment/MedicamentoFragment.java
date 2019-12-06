@@ -110,7 +110,7 @@ public class MedicamentoFragment extends Fragment {
     }
 
     private void llenarLista() {
-        conn = new ConexionSQLiteHelper(getContext(), "bd_usuarios2", null,1);
+        conn = new ConexionSQLiteHelper(getContext(), "bd_medicapp", null,1);
         SQLiteDatabase db=conn.getReadableDatabase();
 
         MedicamentoVo medicamento=null;
@@ -120,12 +120,12 @@ public class MedicamentoFragment extends Fragment {
 
         while (cursor.moveToNext()) {
             medicamento = new MedicamentoVo();
-            medicamento.setNombre(cursor.getString(0));
-            medicamento.setNombreAlt(cursor.getString(1));
-            medicamento.setFechaInicial(cursor.getString(2));
-            medicamento.setFechaFinal(cursor.getString(3));
-            medicamento.setHoraInicio(cursor.getString(4) + " horas");
-            medicamento.setFrecuencia(cursor.getString(5) + " horas");
+            medicamento.setNombre(cursor.getString(1));
+            medicamento.setNombreAlt(cursor.getString(2));
+            medicamento.setFechaInicial(cursor.getString(3));
+            medicamento.setFechaFinal(cursor.getString(4));
+            medicamento.setHoraInicio(cursor.getString(5) + " horas");
+            medicamento.setFrecuencia(cursor.getString(6) + " horas");
 
             listaAlarma.add(medicamento);
         }

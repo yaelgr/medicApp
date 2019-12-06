@@ -6,6 +6,7 @@ import android.content.ContentValues;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
@@ -17,7 +18,11 @@ import com.example.medicapp.BDSQLite.ConexionSQLiteHelper;
 import com.example.medicapp.BDSQLite.Constantes;
 import com.example.medicapp.R;
 
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 
 public class AgregarMedico extends AppCompatActivity implements View.OnClickListener {
 
@@ -61,6 +66,7 @@ public class AgregarMedico extends AppCompatActivity implements View.OnClickList
             DatePickerDialog datePickerDialog = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
                 @Override
                 public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
+                    //txtFecha.setText(dayOfMonth+"/"+(monthOfYear+1)+"/"+year);
                     txtFecha.setText(dayOfMonth+"/"+(monthOfYear+1)+"/"+year);
                 }
             }
@@ -76,25 +82,39 @@ public class AgregarMedico extends AppCompatActivity implements View.OnClickList
             TimePickerDialog timerPickerDialog = new TimePickerDialog(this, new TimePickerDialog.OnTimeSetListener() {
                 @Override
                 public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
-                    txtHora.setText(hourOfDay+":"+minute);
+                    txtHora.setText(hourOfDay+":"+minute+":"+"00");
                 }
             },hora,minutos,false);
             timerPickerDialog.show();
         }
 
         if (v==btnGuardar){
-            agregarMedicoSQL();
+            try {
+                agregarMedicoSQL();
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
         }
     }
 
-    private void agregarMedicoSQL() {
+    private void agregarMedicoSQL() throws ParseException {
 
-        ConexionSQLiteHelper conn=new ConexionSQLiteHelper(this,"bd_usuarios2",null,1);
+        ConexionSQLiteHelper conn=new ConexionSQLiteHelper(this,"bd_medicapp",null,1);
 
         SQLiteDatabase db=conn.getWritableDatabase();
 
+        String sDate1=txtFecha.getText().toString();
+
+        SimpleDateFormat formatter1=new SimpleDateFormat("dd/MM/yyyy");
+        Date date1=formatter1.parse(sDate1);
+
+
+
+
+
+
         String insert="INSERT INTO "+Constantes.TABLA_MEDICO+" ("+Constantes.NOMBRE_MEDICO+","+Constantes.DOMICILIO_MEDICO+","+Constantes.TELEFONO_MEDICO+","+Constantes.FECHA_CITA+","+Constantes.HORA_CITA+") " +
-                "VALUES ('"+txtNombreMedico.getText().toString()+"','"+txtDomicilio.getText().toString()+"','"+txtTel.getText().toString()+"','"+txtFecha.getText().toString()+"', '"+txtHora.getText().toString()+"')";
+                "VALUES ('"+txtNombreMedico.getText().toString()+"','"+txtDomicilio.getText().toString()+"','"+txtTel.getText().toString()+"','"+ formatter1.format(date1)+"', '"+txtHora.getText().toString()+"')";
 
         db.execSQL(insert);
 

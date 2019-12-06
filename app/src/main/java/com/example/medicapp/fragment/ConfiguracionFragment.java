@@ -1,28 +1,19 @@
 package com.example.medicapp.fragment;
 
 import android.content.Context;
-import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.CardView;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
-import com.example.medicapp.Adapter.ConfigAdapter;
-import com.example.medicapp.Class.ConfigVo;
-import com.example.medicapp.Class.DialogFrag_Acerca;
-import com.example.medicapp.Class.DialogFrag_Ajustes;
-import com.example.medicapp.Class.DialogFrag_Google;
-import com.example.medicapp.Class.DialogFrag_Historial;
+import com.example.medicapp.dialog.DialogFrag_Acerca;
+import com.example.medicapp.dialog.DialogFrag_Ajustes;
+import com.example.medicapp.dialog.DialogFrag_Historial;
 import com.example.medicapp.R;
-
-import java.util.ArrayList;
 
 
 /**
