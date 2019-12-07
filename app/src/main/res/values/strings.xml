@@ -80,8 +80,9 @@
     <string name="DialogGoogle"> Informacion de google assistant</string>
     <string name="DialogAjustes">Ajustes</string>
 
-
-
+    <!--  Notificaciones -->
+    <string name="ChannelName"> Notificaciones de Medicapp</string>
+    <string name="ChannelDsc"> Notificaciones de Medicamentos</string>
 
 
 

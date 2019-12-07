@@ -173,8 +173,6 @@ public class AgregarMedicamento extends AppCompatActivity implements View.OnClic
         txtHoraInicio.getText().clear();
         spinnerFrecuenciaHrs.setSelection(0);
 
-
-
     }
 
 
