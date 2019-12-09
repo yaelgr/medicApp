@@ -4,6 +4,7 @@ import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
 import android.content.ContentValues;
 import android.database.sqlite.SQLiteDatabase;
+import android.support.v4.app.NotificationManagerCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -16,6 +17,7 @@ import android.widget.Toast;
 
 import com.example.medicapp.BDSQLite.ConexionSQLiteHelper;
 import com.example.medicapp.BDSQLite.Constantes;
+import com.example.medicapp.MainActivity;
 import com.example.medicapp.R;
 
 import java.text.DateFormat;
@@ -29,6 +31,7 @@ public class AgregarMedico extends AppCompatActivity implements View.OnClickList
     Button btnFecha, btnHora, btnGuardar;
     EditText txtFecha, txtHora, txtNombreMedico, txtDomicilio, txtTel;
     int dia,mes,año,hora,minutos;
+    MainActivity mn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -150,5 +153,18 @@ public class AgregarMedico extends AppCompatActivity implements View.OnClickList
        db.close();
 
        Toast.makeText(getApplicationContext(),"xd",Toast.LENGTH_SHORT).show();
+
+       setNotification(this.mn);
+    }
+    private void setNotification(com.example.medicapp.MainActivity mn){
+
+        Calendar tmp= Calendar.getInstance();
+        tmp.set(this.año,this.mes,this.dia,this.hora,this.minutos);
+        mn.builder.setWhen(tmp.getTimeInMillis());
+
+        NotificationManagerCompat notificationManager = NotificationManagerCompat.from(mn);
+
+        // notificationId is a unique int for each notification that you must define
+        notificationManager.notify(Calendar.getInstance().hashCode(),  mn.builder.build());
     }
 }

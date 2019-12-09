@@ -1,8 +1,12 @@
 package com.example.medicapp;
 
+import android.app.AlarmManager;
 import android.app.Notification;
+import java.util.Calendar;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -19,6 +23,7 @@ import android.view.MenuItem;
 
 
 import com.example.medicapp.BDSQLite.ConexionSQLiteHelper;
+import com.example.medicapp.BDSQLite.Constantes;
 import com.example.medicapp.fragment.ConfiguracionFragment;
 import com.example.medicapp.fragment.InicioFragment;
 import com.example.medicapp.fragment.MedicamentoFragment;
@@ -156,12 +161,12 @@ public class MainActivity extends AppCompatActivity
             notificationManager.createNotificationChannel(channel);
         }
     }
-
-    NotificationCompat.Builder builder = new NotificationCompat.Builder(this, "CanalMedicapp" +
+    public NotificationCompat.Builder builder = new NotificationCompat.Builder(this, "CanalMedicapp" +
             "Alarmas de MedicApp")
             .setSmallIcon(R.drawable.ic_logo)
             .setContentTitle("MedicApp te recuerda")
             .setContentText("Hay una alarma para ti")
             .setPriority(NotificationCompat.PRIORITY_DEFAULT);
+
 
 }
