@@ -49,23 +49,20 @@ public class MyAlarmReceiver extends BroadcastReceiver {
         if(bd!=null) {
             fila = bd.rawQuery("SELECT * FROM medico WHERE fecha_cita='"+fecha_sistema+"' AND hora_cita= '"+hora_sistema+"'", null);
             if(fila.moveToFirst()){
-                alarma=fila.getString(0);
-                titulo=fila.getString(1);
-                descripcion =fila.getString(2);
-                triggerNotification(context,titulo+"\n"+descripcion);
+                Calendar now=Calendar.getInstance();
+                triggerNotification(context,now);
             }
             fila = bd.rawQuery("SELECT * FROM medicamento WHERE fecha_inicial='"+fecha_sistema+"' AND hora_inicio= '"+hora_sistema+"'", null);
             if(fila.moveToFirst()){
-                alarma=fila.getString(0);
-                titulo=fila.getString(1);
-                descripcion =fila.getString(2);
-                triggerNotification(context,titulo+"\n"+descripcion);
+                Calendar now=Calendar.getInstance();
+                triggerNotification(context,now);
+
             }
         }
         bd.close();
     }
 
-    private void triggerNotification(Context contexto, String t) {
+    private void triggerNotification(Context contexto, Calendar ahora) {
         notificationManager= NotificationManagerCompat.from(contexto);
         Intent notificationIntent = new Intent(contexto, MainActivity.class);
         notificationIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
@@ -82,6 +79,7 @@ public class MyAlarmReceiver extends BroadcastReceiver {
                 .setVibrate(pattern)
                 .setContentIntent(contentIntent)
                 .setSound(defaultSound)
+                .setWhen(ahora.getTimeInMillis())
                 .setPriority(NotificationCompat.PRIORITY_HIGH)
                 .setCategory(NotificationCompat.CATEGORY_EVENT)
                 .build();
