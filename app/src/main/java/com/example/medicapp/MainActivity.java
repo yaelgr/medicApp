@@ -145,28 +145,7 @@ public class MainActivity extends AppCompatActivity
 
     }
 
-    //Código para las notificaciones Push:
-    private void createNotificationChannel() {
-        // Create the NotificationChannel, but only on API 26+ because
-        // the NotificationChannel class is new and not in the support library
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            CharSequence name = getString(R.string.ChannelName);
-            String description = getString(R.string.ChannelDsc);
-            int importance = NotificationManager.IMPORTANCE_DEFAULT;
-            NotificationChannel channel = new NotificationChannel("CanalMedicapp", name, importance);
-            channel.setDescription(description);
-            // Register the channel with the system; you can't change the importance
-            // or other notification behaviors after this
-            NotificationManager notificationManager = getSystemService(NotificationManager.class);
-            notificationManager.createNotificationChannel(channel);
-        }
-    }
-    public NotificationCompat.Builder builder = new NotificationCompat.Builder(this, "CanalMedicapp" +
-            "Alarmas de MedicApp")
-            .setSmallIcon(R.drawable.ic_logo)
-            .setContentTitle("MedicApp te recuerda")
-            .setContentText("Hay una alarma para ti")
-            .setPriority(NotificationCompat.PRIORITY_DEFAULT);
+
 
 
 }

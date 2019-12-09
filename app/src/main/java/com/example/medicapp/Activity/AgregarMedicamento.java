@@ -176,7 +176,6 @@ public class AgregarMedicamento extends AppCompatActivity implements View.OnClic
         txtHoraInicio.getText().clear();
         spinnerFrecuenciaHrs.setSelection(0);
 
-        setNotification(this.mn);
     }
 
 
@@ -189,15 +188,5 @@ public class AgregarMedicamento extends AppCompatActivity implements View.OnClic
     public void onNothingSelected(AdapterView<?> parent) {
 
     }
-    private void setNotification(com.example.medicapp.MainActivity mn){
 
-        Calendar tmp= Calendar.getInstance();
-        tmp.set(this.año,this.mes,this.dia,this.hora,this.minutos);
-        mn.builder.setWhen(tmp.getTimeInMillis());
-
-        NotificationManagerCompat notificationManager = NotificationManagerCompat.from(mn);
-
-        // notificationId is a unique int for each notification that you must define
-        notificationManager.notify(Calendar.getInstance().hashCode(),  mn.builder.build());
-    }
 }

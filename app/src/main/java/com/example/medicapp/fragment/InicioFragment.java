@@ -160,9 +160,9 @@ public class InicioFragment extends Fragment {
 
     private void llenarLista() {
         listaAlarma.add(new InicioVo("medico","7:00 AM"));
-        listaAlarma.add(new InicioVo("alarma","8:00 AM"));
+        listaAlarma.add(new InicioVo("Alarma","8:00 AM"));
         listaAlarma.add(new InicioVo("Medicamento2","9:00 AM"));
-        listaAlarma.add(new InicioVo("alarma","10:00 AM"));
+        listaAlarma.add(new InicioVo("Alarma","10:00 AM"));
         listaAlarma.add(new InicioVo("Medicamento2","11:00 AM"));
 
 

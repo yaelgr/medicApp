@@ -153,18 +153,7 @@ public class AgregarMedico extends AppCompatActivity implements View.OnClickList
        db.close();
 
        Toast.makeText(getApplicationContext(),"xd",Toast.LENGTH_SHORT).show();
-
-       setNotification(this.mn);
+       
     }
-    private void setNotification(com.example.medicapp.MainActivity mn){
 
-        Calendar tmp= Calendar.getInstance();
-        tmp.set(this.año,this.mes,this.dia,this.hora,this.minutos);
-        mn.builder.setWhen(tmp.getTimeInMillis());
-
-        NotificationManagerCompat notificationManager = NotificationManagerCompat.from(mn);
-
-        // notificationId is a unique int for each notification that you must define
-        notificationManager.notify(Calendar.getInstance().hashCode(),  mn.builder.build());
-    }
 }
