@@ -85,17 +85,17 @@ public class InicioFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-    View vista = inflater.inflate(R.layout.fragment_inicio, container, false);
+        View vista = inflater.inflate(R.layout.fragment_inicio, container, false);
 
-    listaAlarma=new ArrayList<>();
-    listaMedico=new ArrayList<>();
-    listaMedicamento=new ArrayList<>();
+        /*listaAlarma=new ArrayList<>();
+        listaMedico=new ArrayList<>();
+        listaMedicamento=new ArrayList<>();
 
-    recyclerInicio= vista.findViewById(R.id.recyclerInicio);
-    recyclerInicio.setLayoutManager(new LinearLayoutManager(getContext()));
+        //recyclerInicio= vista.findViewById(R.id.recyclerInicio);
+        recyclerInicio.setLayoutManager(new LinearLayoutManager(getContext()));
 
-    llenarListaMedico();
-    llenarListaMedicamento();
+        llenarListaMedico();
+        llenarListaMedicamento();
 
 
 
@@ -103,12 +103,12 @@ public class InicioFragment extends Fragment {
         MedicamentoAdapter adaptermedicamento=new MedicamentoAdapter(listaMedicamento);
 
         recyclerInicio.setAdapter(adaptermedico);
-        recyclerInicio.setAdapter(adaptermedicamento);
+        recyclerInicio.setAdapter(adaptermedicamento);*/
 
 
 
         return vista;
-}
+    }
 
     private void llenarListaMedico() {
         conn = new ConexionSQLiteHelper(getContext(), "bd_usuarios2", null,1);

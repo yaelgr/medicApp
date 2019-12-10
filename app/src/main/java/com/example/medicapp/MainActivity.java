@@ -51,7 +51,6 @@ public class MainActivity extends AppCompatActivity
                         .setAction("Action", null).show();
             }
         });
-
         FloatingActionButton fab_medico = (FloatingActionButton) findViewById(R.id.fab_medico);
         fab_medico.setOnClickListener(new View.OnClickListener() {
             @Override

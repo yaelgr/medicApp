@@ -73,7 +73,7 @@ public class AgregarMedico extends AppCompatActivity implements View.OnClickList
                     txtFecha.setText(dayOfMonth+"/"+(monthOfYear+1)+"/"+year);
                 }
             }
-            ,dia,mes,año);
+                    ,dia,mes,año);
             datePickerDialog.show();
         }
 
@@ -135,25 +135,25 @@ public class AgregarMedico extends AppCompatActivity implements View.OnClickList
 
     private void agregarMedico() {
 
-       ConexionSQLiteHelper conn = new ConexionSQLiteHelper(this,"bd_medicapp", null, 1);
+        ConexionSQLiteHelper conn = new ConexionSQLiteHelper(this,"bd_medicapp", null, 1);
 
-       SQLiteDatabase db=conn.getWritableDatabase();
+        SQLiteDatabase db=conn.getWritableDatabase();
 
-       ContentValues values=new ContentValues();
-       values.put(Constantes.NOMBRE_MEDICO, txtNombreMedico.getText().toString());
-       values.put(Constantes.DOMICILIO_MEDICO, txtDomicilio.getText().toString());
-       values.put(Constantes.TELEFONO_MEDICO, txtTel.getText().toString());
-       values.put(Constantes.FECHA_CITA, txtFecha.getText().toString());
-       values.put(Constantes.HORA_CITA, txtHora.getText().toString());
+        ContentValues values=new ContentValues();
+        values.put(Constantes.NOMBRE_MEDICO, txtNombreMedico.getText().toString());
+        values.put(Constantes.DOMICILIO_MEDICO, txtDomicilio.getText().toString());
+        values.put(Constantes.TELEFONO_MEDICO, txtTel.getText().toString());
+        values.put(Constantes.FECHA_CITA, txtFecha.getText().toString());
+        values.put(Constantes.HORA_CITA, txtHora.getText().toString());
 
 
-       Long idResultante = db.insert(Constantes.TABLA_MEDICO, Constantes.NOMBRE_MEDICO,values);
+        Long idResultante = db.insert(Constantes.TABLA_MEDICO, Constantes.NOMBRE_MEDICO,values);
 
-       Toast.makeText(getApplicationContext(), "nombre medico: " +idResultante,Toast.LENGTH_SHORT).show();
-       db.close();
+        Toast.makeText(getApplicationContext(), "nombre medico: " +idResultante,Toast.LENGTH_SHORT).show();
+        db.close();
 
-       Toast.makeText(getApplicationContext(),"xd",Toast.LENGTH_SHORT).show();
-       
+        Toast.makeText(getApplicationContext(),"xd",Toast.LENGTH_SHORT).show();
+
     }
 
 }
