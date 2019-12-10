@@ -33,7 +33,7 @@ public class MyAlarmReceiver extends BroadcastReceiver {
         Intent i = new Intent(context, MyTestService.class);
         context.startService(i);
         Calendar calendario = Calendar.getInstance();
-        int hora, min,dia,mes,ano;
+        int hora, min,dia,mes,ano,seg;
         String cadenaF, cadenaH,fecha_sistema,hora_sistema;
 
         dia = calendario.get(Calendar.DAY_OF_MONTH);
@@ -41,21 +41,22 @@ public class MyAlarmReceiver extends BroadcastReceiver {
         ano = calendario.get(Calendar.YEAR);
         hora = calendario.get(Calendar.HOUR_OF_DAY);
         min = calendario.get(Calendar.MINUTE);
-        fecha_sistema=mes+"-"+dia+"-"+ano+" ";
-        hora_sistema=hora+":"+min;
+        seg = calendario.get(Calendar.SECOND);
+        fecha_sistema=dia+"/"+mes+"/"+ano;
+        hora_sistema=hora+":"+min+":"+seg;
         admin = new ConexionSQLiteHelper(context, vars.bd, null, vars.version);
         bd = admin.getWritableDatabase();
 
         if(bd!=null) {
             fila = bd.rawQuery("SELECT * FROM medico WHERE fecha_cita='"+fecha_sistema+"' AND hora_cita= '"+hora_sistema+"'", null);
             if(fila.moveToFirst()){
-                Calendar now=Calendar.getInstance();
-                triggerNotification(context,now);
+
+                triggerNotification(context,calendario);
             }
             fila = bd.rawQuery("SELECT * FROM medicamento WHERE fecha_inicial='"+fecha_sistema+"' AND hora_inicio= '"+hora_sistema+"'", null);
             if(fila.moveToFirst()){
-                Calendar now=Calendar.getInstance();
-                triggerNotification(context,now);
+
+                triggerNotification(context,calendario);
 
             }
         }
