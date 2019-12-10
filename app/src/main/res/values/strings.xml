@@ -16,7 +16,7 @@
     <string name="nombre_medico">Nombre del médico</string>
     <string name="domicilio_medico">Calle, número y colonia</string>
     <string name="localidad_medico">Localidad y provincia</string>
-    <string name="tlf_medico">Telefono</string>
+    <string name="tlf_medico">Teléfono</string>
     <string name="cel_medico">Celular</string>
     <string name="cita">Próxima cita</string>
     <string name="title_activity_agregar_medicamento">AgregarMedicamento</string>
@@ -75,9 +75,9 @@
     <!--  Dialog Acerca de -->
     <string name="ProyectoDesc">Esta aplicacion ha sido desarrollada por: Diego Yael Gomez Rosalio,
     Angel y Jaciel de la Facultad de informática en la Universidad Autónoma de Querétaro. Se ha utilizado
-    Android studio para el desarrollo teninedo como requerimiento de android minimo 4.4 </string>
-    <string name="DialogHistorial"> A continuacion se muestra el historial</string>
-    <string name="DialogGoogle"> Informacion de google assistant</string>
+    Android studio para el desarrollo teniendo como requerimiento de android minimo 4.4 </string>
+    <string name="DialogHistorial"> A continuación se muestra el historial</string>
+    <string name="DialogGoogle"> Información de google assistant</string>
     <string name="DialogAjustes">Ajustes</string>
 
     <!--  Notificaciones -->

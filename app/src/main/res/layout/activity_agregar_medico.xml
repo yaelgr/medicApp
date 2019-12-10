@@ -8,7 +8,7 @@
     android:fillViewport="true"
     >
 
-<android.support.constraint.ConstraintLayout
+<LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -17,108 +17,99 @@
 
     <EditText
         android:id="@+id/txtMedico"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="8dp"
-        android:background="@drawable/custom_button2"
+        android:layout_margin="15dp"
         android:ems="10"
         android:hint="@string/nombre_medico"
-
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        />
 
     <EditText
         android:id="@+id/txtDomicilio"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="8dp"
-        android:background="@drawable/custom_button2"
+        android:layout_margin="15dp"
         android:ems="10"
         android:hint="@string/domicilio_medico"
 
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtMedico" />
+       />
 
     <EditText
         android:id="@+id/txtTel"
-        android:layout_width="373dp"
-        android:layout_height="32dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="28dp"
-        android:background="@drawable/custom_button2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
         android:ems="10"
         android:hint="@string/tlf_medico"
         android:inputType="phone"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtDomicilio" />
+        />
 
-    <Button
-        android:id="@+id/btnFecha"
-        android:layout_width="wrap_content"
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="55dp"
-        android:layout_marginTop="50dp"
-        android:text="@string/btnfecha"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtTel" />
+        android:orientation="horizontal"
+        android:gravity="center">
 
-    <Button
-        android:id="@+id/btnHora"
-        android:layout_width="wrap_content"
+
+        <Button
+            android:id="@+id/btnFecha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:text="@string/btnfecha"
+            />
+
+        <EditText
+            android:id="@+id/txtFecha"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:ems="10"
+
+            />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="55dp"
-        android:layout_marginTop="40dp"
-        android:text="@string/btnhora"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnFecha" />
+        android:orientation="horizontal"
+        android:gravity="center">
 
-    <EditText
-        android:id="@+id/txtFecha"
-        android:layout_width="170dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
-        android:layout_marginEnd="16dp"
-        android:background="@drawable/custom_button2"
-        android:ems="10"
 
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtTel" />
 
-    <EditText
-        android:id="@+id/txtHora"
-        android:layout_width="170dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
-        android:layout_marginEnd="4dp"
-        android:background="@drawable/custom_button2"
-        android:ems="10"
 
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtFecha" />
+        <Button
+            android:id="@+id/btnHora"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:text="@string/btnhora"
+            />
+
+
+
+        <EditText
+            android:id="@+id/txtHora"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:ems="10"
+
+            />
+
+    </LinearLayout>
 
     <Button
         android:id="@+id/btnGuardarMedicamento"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
         android:text="@string/btnguardar"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnHora"
-        app:layout_constraintVertical_bias="0.48" />
+        android:layout_margin="15dp"
+        android:layout_gravity="center"
+     />
 
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>
 </ScrollView>
